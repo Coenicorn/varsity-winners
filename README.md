@@ -17,6 +17,8 @@ about the sport and/or the history of it, so help is greatly appreciated!
 
 Most of the names in this document are abbreviated, because the main source I used for the majority of the names does so. If you know any of the names, please change them to the non-abbreviated versions and submit a pull request!
 
+`unknown` names are clubs who've won that weren't mentioned in my main source, so if you can find them, hats off to you!
+
 ## Data format
 
 The data is stored in a single JSON file.
