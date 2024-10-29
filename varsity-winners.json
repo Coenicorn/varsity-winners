@@ -193,7 +193,7 @@
             "draw": false
         },
         {
-            "date": "09-04-2024",
+            "date": "09-04-2017",
             "location": "Amsterdam-Rijnkanaal",
             "crew": [
                 {
@@ -218,6 +218,33 @@
             "notes": "",
             "draw": false
         },
+        {
+            "date": "10-04-2016",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Dieuwke Fetter"
+                },
+                {
+                    "name": "Nelson Ritsema"
+                },
+                {
+                    "name": "Robert Vicic"
+                },
+                {
+                    "name": "Mick Makker"
+                },
+                {
+                    "name": "Jaap Scholten"
+                }
+            ],
+            "club": "Nereus",
+            "time": "10:43,99",
+            "margin_over_second": "10,73",
+            "notes": "",
+            "draw": false
+        },
+        
     ],
     "women": []
 }
