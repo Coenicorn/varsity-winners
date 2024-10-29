@@ -1,0 +1,36 @@
+{
+    "men": [
+        {
+            "date": ,
+            "location": ,
+            "crew": [
+                {
+                    "name": ,
+                    "age": ,
+                }
+            ],
+            "club": ,
+            "time": ,
+            "margin_over_second": ,
+            "notes": ,
+            "draw": 
+        }
+    ],
+    "women": [
+        {
+            "date": ,
+            "location": ,
+            "crew": [
+                {
+                    "name": ,
+                    "age": ,
+                }
+            ],
+            "club": ,
+            "time": ,
+            "margin_over_second": ,
+            "notes": ,
+            "draw": 
+        }
+    ]
+}
