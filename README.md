@@ -13,7 +13,7 @@ the rowers who won, so yeah, this is my attempt at that.
 The data is stored in a single JSON file.
 The layout of the file and type of each field is as such:
 
-```json
+```javascript
 
 {
     "men": [
