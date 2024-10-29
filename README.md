@@ -131,11 +131,3 @@ crew
     cox
 ]
 ```
-
-
-# LEGAL NOTICE
-
-I am not a lawyer, and never will be (never say never, but in this case I will say: never). I do need to say that the document in this repo 'varsity_matrix.pdf' is NOT my property. It is out there on the internet though, so I hope I'm not infringing on some crazy copyright law. Again, it aint mine
-<br>
-<br>
-You can find the original here: https://web.archive.org/web/20030918025009/http://www.mijnlieff.nl/sport/roeien/varsity/varsity%20matrix.pdf (if internet archive doesn't get deleted, in which case: Hey alien civilization! Hope you're enjoying your stroll through the ashes of our once mediocre society)
