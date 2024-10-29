@@ -11,6 +11,8 @@ list of *people* who have won this race, as usually
 only the club who wins is recorded (because it's a
 team sport yadayada posh crap) and I wanted to know
 the rowers who won, so yeah, this is my attempt at that.
+<br>
+The data is meant to be read programmatically, so don't get mad at me for that
 
 ## Contributing
 
