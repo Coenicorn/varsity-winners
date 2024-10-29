@@ -133,3 +133,5 @@ crew
     cox
 ]
 ```
+
+Thanks for reading this far <3
