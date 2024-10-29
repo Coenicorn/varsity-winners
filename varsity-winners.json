@@ -1,38 +1,9 @@
 {
     "men": [
         {
-            "date": ,
-            "location": ,
-            "crew": [
-                {
-                    "name": 
-                },
-                {
-                    "name": 
-                },
-                {
-                    "name": 
-                },
-                {
-                    "name": 
-                },
-                {
-                    "name": 
-                }
-            ],
-            "club": ,
-            "time": ,
-            "margin_over_second": ,
-            "notes": ,
-            "draw": 
-        },
-        {
             "date": "07-04-2024",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Ellen Bijkerk"
-                },
                 {
                     "name": "Pieter van Veen"
                 },
@@ -44,21 +15,24 @@
                 },
                 {
                     "name": "Casper van der Steen"
+                },
+                {
+                    "name": "Ellen Bijkerk"
                 }
             ],
             "club": "Triton",
             "time": "09:52,13",
+            "alt_margin": "",
             "margin_over_second": "03,66",
             "notes": "Skoll ligt het grootste deel van deze race vooraan op dominante voorsprong, tot een grote snoek in het laatste deel van de race. Skoll had nog nooit een Varsity gewonnen.",
-            "draw": false
+            "sources": [
+                0
+            ]
         },
         {
             "date": "02-04-2023",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Ellen Bijkerk"
-                },
                 {
                     "name": "Eli Brouwer"
                 },
@@ -70,21 +44,24 @@
                 },
                 {
                     "name": "Casper van der Steen"
+                },
+                {
+                    "name": "Ellen Bijkerk"
                 }
             ],
             "club": "Triton",
             "time": "10:25,36",
+            "alt_margin": "",
             "margin_over_second": "12,08",
             "notes": "",
-            "draw": false
+            "sources": [
+                1
+            ]
         },
         {
             "date": "03-04-2022",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Carlen Upmeijer"
-                },
                 {
                     "name": "Nelson Ritsema"
                 },
@@ -96,21 +73,24 @@
                 },
                 {
                     "name": "Guus Mollee"
+                },
+                {
+                    "name": "Carien Upmeijer"
                 }
             ],
             "club": "Nereus",
             "time": "09:59,99",
+            "alt_margin": "",
             "margin_over_second": "06,55",
             "notes": "",
-            "draw": false
+            "sources": [
+                2
+            ]
         },
         {
             "date": "13-04-2021",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Carien Upmeijer"
-                },
                 {
                     "name": "Rik Rienks"
                 },
@@ -122,13 +102,19 @@
                 },
                 {
                     "name": "Michiel Oyen"
+                },
+                {
+                    "name": "Carien Upmeijer"
                 }
             ],
             "club": "Nereus",
             "time": "09:46,34",
+            "alt_margin": "",
             "margin_over_second": "06,52",
             "notes": "",
-            "draw": false
+            "sources": [
+                3
+            ]
         },
         {
             "date": "05-04-2020",
@@ -136,17 +122,17 @@
             "crew": [],
             "club": "none",
             "time": "00:00,00",
+            "alt_margin": "",
             "margin_over_second": "00,00",
             "notes": "Cancelled due to Covid-19",
-            "draw": false
+            "sources": [
+                4
+            ]
         },
         {
             "date": "07-04-2019",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Fiep Warmerdam"
-                },
                 {
                     "name": "Kaj Hendriks"
                 },
@@ -158,21 +144,24 @@
                 },
                 {
                     "name": "Harold Langen"
+                },
+                {
+                    "name": "Fiep Warmerdam"
                 }
             ],
             "club": "Triton",
             "time": "10:06,72",
+            "alt_margin": "",
             "margin_over_second": "01,10",
             "notes": "Eerste overwinning voor Triton in 52 jaar",
-            "draw": false
+            "sources": [
+                5
+            ]
         },
         {
             "date": "08-04-2018",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Dieuwke Fetter"
-                },
                 {
                     "name": "Nelson Ritsema"
                 },
@@ -184,47 +173,53 @@
                 },
                 {
                     "name": "Abe Wiersma"
+                },
+                {
+                    "name": "Dieuwke Fetter"
                 }
             ],
             "club": "Nereus",
             "time": "09:45,05",
+            "alt_margin": "",
             "margin_over_second": "03,46",
             "notes": "",
-            "draw": false
+            "sources": [
+                6
+            ]
         },
         {
             "date": "09-04-2017",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
                 {
-                    "name": "Kimberly Kamp"
+                    "name": "Mick Makker"
                 },
                 {
-                    "name": "Reinier Spillenaar Bilgen"
+                    "name": "Lex van den Herik"
                 },
                 {
-                    "name": "Jasper Tissen"
+                    "name": "Abe Wiersma"
                 },
                 {
-                    "name": "Floris von Bonninghausen"
+                    "name": "Freek Robbers"
                 },
                 {
-                    "name": "David Fox"
+                    "name": "Dieuwke Fetter"
                 }
             ],
-            "club": "Skadi",
-            "time": "09:53,08",
-            "margin_over_second": "01,50",
+            "club": "Nereus",
+            "time": "09:48,74",
+            "alt_margin": "",
+            "margin_over_second": "01,08",
             "notes": "",
-            "draw": false
+            "sources": [
+                7
+            ]
         },
         {
             "date": "10-04-2016",
-            "location": "Amsterdam-Rijnkanaal",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
-                {
-                    "name": "Dieuwke Fetter"
-                },
                 {
                     "name": "Nelson Ritsema"
                 },
@@ -236,15 +231,772 @@
                 },
                 {
                     "name": "Jaap Scholten"
+                },
+                {
+                    "name": "Dieuwke Fetter"
                 }
             ],
             "club": "Nereus",
             "time": "10:43,99",
+            "alt_margin": "",
             "margin_over_second": "10,73",
             "notes": "",
-            "draw": false
+            "sources": [
+                8
+            ]
         },
-        
+        {
+            "date": "05-04-2015",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Reinier Spillenaar Bilgen"
+                },
+                {
+                    "name": "Jasper Tissen"
+                },
+                {
+                    "name": "Floris von Bonninghausen"
+                },
+                {
+                    "name": "David Fox"
+                },
+                {
+                    "name": "Kimberly Kamp"
+                }
+            ],
+            "club": "Skadi",
+            "time": "09:53,00",
+            "alt_margin": "",
+            "margin_over_second": "01,50",
+            "notes": "",
+            "sources": [
+                9
+            ]
+        },
+        {
+            "date": "06-04-2014",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Govert Viergever"
+                },
+                {
+                    "name": "Peter van Schie"
+                },
+                {
+                    "name": "Ruben Knab"
+                },
+                {
+                    "name": "Dirk Uittenbogaard"
+                },
+                {
+                    "name": "Tim van den Ende"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:57,33",
+            "alt_margin": "",
+            "margin_over_second": "14,03",
+            "notes": "",
+            "sources": [
+                10
+            ]
+        },
+        {
+            "date": "07-04-2013",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Dirk Uittenbogaard"
+                },
+                {
+                    "name": "Ruben Knab"
+                },
+                {
+                    "name": "Peter van Schie"
+                },
+                {
+                    "name": "Robert Lücken"
+                },
+                {
+                    "name": "Tim van den Ende"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:42,89",
+            "alt_margin": "",
+            "margin_over_second": "04,84",
+            "notes": "",
+            "sources": [
+                11
+            ]
+        },
+        {
+            "date": "08-04-2012",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Bob van Velsen"
+                },
+                {
+                    "name": "Govert Viergever"
+                },
+                {
+                    "name": "Peter van Schie"
+                },
+                {
+                    "name": "Dieuwke Fetter"
+                },
+                {
+                    "name": "Tim van den Ende"
+                }
+            ],
+            "club": "Nereus",
+            "time": "10:10,51",
+            "alt_margin": "",
+            "margin_over_second": "10,76",
+            "notes": "",
+            "sources": [
+                12
+            ]
+        },
+        {
+            "date": "10-04-2011",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Dirk Uittenbogaard"
+                },
+                {
+                    "name": "Boaz Meylink"
+                },
+                {
+                    "name": "Vincent van der Want"
+                },
+                {
+                    "name": "Robert Lücken"
+                },
+                {
+                    "name": "Arco de Vries"
+                }
+            ],
+            "club": "Nereus",
+            "time": "10:01,76",
+            "alt_margin": "",
+            "margin_over_second": "07,12",
+            "notes": "",
+            "sources": [
+                13
+            ]
+        },
+        {
+            "date": "11-04-2010",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Olaf van Andel"
+                },
+                {
+                    "name": "Roel Haen"
+                },
+                {
+                    "name": "David Kuipers"
+                },
+                {
+                    "name": "Mitchell Steenman"
+                },
+                {
+                    "name": "Inger-Elze de Langen"
+                }
+            ],
+            "club": "Skadi",
+            "time": "00:00,00",
+            "alt_margin": "",
+            "margin_over_second": "00,00",
+            "notes": "Tijden niet gevonden",
+            "sources": [
+                14,
+                15,
+                16
+            ]
+        },
+        {
+            "date": "12-04-2009",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "David Kuipers"
+                },
+                {
+                    "name": "Roel Haen"
+                },
+                {
+                    "name": "Olaf van Andel"
+                },
+                {
+                    "name": "Mitchell Steenman"
+                },
+                {
+                    "name": "Ralhp Gadiot"
+                }
+            ],
+            "club": "Skadi",
+            "time": "09:46,00",
+            "alt_margin": "",
+            "margin_over_second": "02,65",
+            "notes": "",
+            "sources": [
+                17,
+                18,
+                19,
+                20,
+                21
+            ]
+        },
+        {
+            "date": "04-04-2008",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "David Kuipers"
+                },
+                {
+                    "name": "Roel Haen"
+                },
+                {
+                    "name": "Olaf van Andel"
+                },
+                {
+                    "name": "Mitchell Steenman"
+                },
+                {
+                    "name": "Ralhp Gadiot"
+                }
+            ],
+            "club": "Skadi",
+            "time": "09:52,40",
+            "alt_margin": "",
+            "margin_over_second": "13,20",
+            "notes": "",
+            "sources": [
+                22
+            ]
+        },
+        {
+            "date": "15-04-2007",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "David Kuipers"
+                },
+                {
+                    "name": "Roel Haen"
+                },
+                {
+                    "name": "Olaf van Andel"
+                },
+                {
+                    "name": "Mitchell Steenman"
+                },
+                {
+                    "name": "Ralhp Gadiot"
+                }
+            ],
+            "club": "Skadi",
+            "time": "10:08,20",
+            "alt_margin": "",
+            "margin_over_second": "06,10",
+            "notes": "Tegensprekende bronnen 3 en 4",
+            "sources": [
+                20,
+                23,
+                24,
+                25
+            ]
+        },
+        {
+            "date": "09-04-2006",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "David Kuipers"
+                },
+                {
+                    "name": "Roel Haen"
+                },
+                {
+                    "name": "Olaf van Andel"
+                },
+                {
+                    "name": "Mitchell Steenman"
+                },
+                {
+                    "name": "Ralhp Gadiot"
+                }
+            ],
+            "club": "Skadi",
+            "time": "09:39,79",
+            "alt_margin": "",
+            "margin_over_second": "05,22",
+            "notes": "",
+            "sources": [
+                20,
+                26,
+                27
+            ]
+        },
+        {
+            "date": "10-04-2005",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Gerard van der Linden"
+                },
+                {
+                    "name": "Ivo Snijders"
+                },
+                {
+                    "name": "Jan Rog"
+                },
+                {
+                    "name": "Gijs Vermeulen"
+                },
+                {
+                    "name": "Jacqueline Nijzink"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:59,9",
+            "alt_margin": "",
+            "margin_over_second": "01,40",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "11-04-2004",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Roy van Kessel"
+                },
+                {
+                    "name": "Sjoerd Hamburger"
+                },
+                {
+                    "name": "Bert Westerveld"
+                },
+                {
+                    "name": "Geert Cirkel"
+                },
+                {
+                    "name": "Merijn van Oijen"
+                }
+            ],
+            "club": "Orca",
+            "time": "10:00,79",
+            "alt_margin": "",
+            "margin_over_second": "04,92",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "13-04-2003",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Gerard van der Linden"
+                },
+                {
+                    "name": "Thomas Dirksmeier"
+                },
+                {
+                    "name": "Tijs Groot"
+                },
+                {
+                    "name": "Gijs Vermeulen"
+                },
+                {
+                    "name": "Mai Thieme"
+                }
+            ],
+            "club": "Nereus",
+            "time": "10:56,20",
+            "alt_margin": "",
+            "margin_over_second": "05,50",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "07-04-2002",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Gerard van der Linden"
+                },
+                {
+                    "name": "Thomas Dirksmeier"
+                },
+                {
+                    "name": "Tijs Groot"
+                },
+                {
+                    "name": "Gijs Vermeulen"
+                },
+                {
+                    "name": "Mai Thieme"
+                }
+            ],
+            "club": "Nereus",
+            "time": "10:09,00",
+            "alt_margin": "",
+            "margin_over_second": "08,20",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "08-04-2001",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "M. v.d. Horst"
+                },
+                {
+                    "name": "Y. Kleinlugtenbelt"
+                },
+                {
+                    "name": "M. Vergunst"
+                },
+                {
+                    "name": "B. Schuuring"
+                },
+                {
+                    "name": "N. Santana"
+                }
+            ],
+            "club": "Skadi",
+            "time": "09:58,60",
+            "alt_margin": "",
+            "margin_over_second": "07,10",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "16-04-2000",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                }
+            ],
+            "club": "Orca",
+            "time": "10:19,00",
+            "alt_margin": "",
+            "margin_over_second": "06,80",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "18-04-1999",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                }
+            ],
+            "club": "Orca",
+            "time": "09:31,20",
+            "alt_margin": "",
+            "margin_over_second": "01,80",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "19-04-1998",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Th. van Giffen"
+                },
+                {
+                    "name": "N. Ypenburg"
+                },
+                {
+                    "name": "A. Middag"
+                },
+                {
+                    "name": "D. Simon"
+                },
+                {
+                    "name": "C.W. Cheung"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:58,90",
+            "alt_margin": "",
+            "margin_over_second": "08,10",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "13-04-1997",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "A.O. van der Marck"
+                },
+                {
+                    "name": "A.J. Brinkerink"
+                },
+                {
+                    "name": "V.P.C. Vreeken"
+                },
+                {
+                    "name": "V.C. van Gool"
+                },
+                {
+                    "name": "G.O. de Vries"
+                }
+            ],
+            "club": "Laga",
+            "time": "09:40,50",
+            "alt_margin": "",
+            "margin_over_second": "04,40",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "14-04-1996",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "J. Janssen"
+                },
+                {
+                    "name": "P. Vos"
+                },
+                {
+                    "name": "D. Simon"
+                },
+                {
+                    "name": "M. Bartman"
+                },
+                {
+                    "name": "C.W. Cheung"
+                }
+            ],
+            "club": "Nereus",
+            "time": "10:22,80",
+            "alt_margin": "",
+            "margin_over_second": "11,00",
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "23-04-1995",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "club": "Euros",
+            "time": "09:55,10",
+            "alt_margin": "",
+            "margin_over_second": "02,80",
+            "crew": [
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                },
+                {
+                    "name": "unknown"
+                }
+            ],
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "17-04-1994",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "club": "Nereus",
+            "time": "10:07,50",
+            "alt_margin": "",
+            "margin_over_second": "10,20",
+            "crew": [
+                {
+                    "name": "J. Krijtenburg"
+                },
+                {
+                    "name": "J. Janssen"
+                },
+                {
+                    "name": "M. Eecen"
+                },
+                {
+                    "name": "M. Bartman"
+                },
+                {
+                    "name": "K. Turkcan"
+                }
+            ],
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "18-04-1993",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "club": "Nereus",
+            "time": "10:02,00",
+            "alt_margin": "",
+            "margin_over_second": "05,04",
+            "crew": [
+                {
+                    "name": "M. Eecen"
+                },
+                {
+                    "name": "P. Vos"
+                },
+                {
+                    "name": "J. Janssen"
+                },
+                {
+                    "name": "M. Bartman"
+                },
+                {
+                    "name": "K. Turkcan"
+                }
+            ],
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        },
+        {
+            "date": "19-04-1992",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "club": "Skadi",
+            "time": "09:28,00",
+            "alt_margin": "",
+            "margin_over_second": "01,00",
+            "crew": [
+                {
+                    "name": "G.J. Oelderik"
+                },
+                {
+                    "name": "H.J. Koppelaars"
+                },
+                {
+                    "name": "P. Wiltenburg"
+                },
+                {
+                    "name": "K. Maasdijk"
+                },
+                {
+                    "name": "M. Overmans"
+                }
+            ],
+            "notes": "",
+            "sources": [
+                25,
+                28
+            ]
+        }
     ],
-    "women": []
+    "women": [],
+    "sources": [
+        "https://regatta.time-team.nl/varsity/2024/results/e9900973e-ec18-4494-af93-ca8bd0c2699c.php",
+        "https://regatta.time-team.nl/varsity/2023/results/e0ed1fd0b-5350-4a69-8bd5-69aba9d38f2f.php",
+        "https://regatta.time-team.nl/varsity/2022/results/efdf13a4b-99e9-404e-b6c9-679c4426b8e8.php",
+        "https://regatta.time-team.nl/varsity/2021/results/e216de458-f3f4-454e-8c23-8188e6aad078.php",
+        "https://knsrb.nl/varsity/wedstrijdinfo/",
+        "https://regatta.time-team.nl/varsity/2019/results/e7f0636c0-455f-4123-aa3f-ff2642ba7d58.php",
+        "https://regatta.time-team.nl/varsity/2018/results/001.php",
+        "https://regatta.time-team.nl/varsity/2017/results/001.php",
+        "https://regatta.time-team.nl/varsity/2016/results/001.php",
+        "https://regatta.time-team.nl/varsity/2015/results/001.php",
+        "https://regatta.time-team.nl/varsity/2014/results/001.php",
+        "https://regatta.time-team.nl/varsity/2013/results/matrix.php",
+        "https://regatta.time-team.nl/varsity/2012/results/001.php",
+        "https://regatta.time-team.nl/varsity/2011/results/001.php",
+        "https://www.mitchelsteenman.nl/blog-mitchel/13-varsity-2010",
+        "https://gyas.nl/m/actueel/verslagen?report_id=225",
+        "https://www.youtube.com/watch?v=CMj32vAHscU",
+        "https://www.rijnmond.nl/nieuws/26400/skadi-wint-126e-varsity",
+        "https://issuu.com/ppdemeijer/docs/roeien_uit_rotterdam_april_2009",
+        "https://dub.uu.nl/nl/content/skadi-wint-varsity-2009",
+        "https://www.skadi.nl/varsity",
+        "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=7473127e-ed06-4e4c-a156-f7f7114ebf13&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A7VFM-3D11-2RM0-C0N5-00000-00&pdcontentcomponentid=259070&pdteaserkey=sr2&pditab=allpods&ecomp=hc-yk&earg=sr2&prid=2c79f12f-fd3f-4550-9070-18b7cdf2f170",
+        "https://advance-lexis-com.hu.idm.oclc.org/api/document?collection=news&id=urn%3acontentItem%3a4S78-GBB0-TXKH-606W-00000-00&context=1519360&identityprofileid=MR9SPH56959",
+        "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=463e7690-7528-4ada-9976-76f6316a2516&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4NHC-FVM0-TX38-91SD-00000-00&pdcontentcomponentid=294311&pdteaserkey=sr12&pditab=allpods&ecomp=hc-yk&earg=sr12&prid=6ff890f2-de10-4703-857a-f659a2ec7a8a",
+        "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=93a8da09-36fd-4219-8760-ef94604ebdba&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4NH4-KK10-TXJ3-V1TP-00000-00&pdcontentcomponentid=259070&pdteaserkey=sr21&pditab=allpods&ecomp=hc-yk&earg=sr21&prid=31fccba7-3075-49e1-8241-fe56819dbaad",
+        "https://web.archive.org/web/20080412011202/http://www.knsrb.nl/index.php?id=189%2C0%2C0%2C1%2C0%2C0",
+        "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=3414fb93-da13-4572-b5e8-475202ad5fff&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4JP1-BJJ0-00J5-K4XY-00000-00&pdcontentcomponentid=168873&pdteaserkey=sr0&pditab=allpods&ecomp=hc-yk&earg=sr0&prid=07ba7a42-61d6-4ddb-9c55-8fe2b9467f1b",
+        "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=7a8dbcbc-4b8a-4ae3-a0f5-9475b5f8714f&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4JP1-TNX0-TX38-73BV-00000-00&pdcontentcomponentid=294313&pdteaserkey=sr12&pditab=allpods&ecomp=hc-yk&earg=sr12&prid=75f99b76-d505-42bf-905d-68015e09b2bd",
+        "https://web.archive.org/web/20030918025009/http://www.mijnlieff.nl/sport/roeien/varsity/varsity%20matrix.pdf"
+    ]
 }
