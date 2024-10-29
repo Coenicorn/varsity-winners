@@ -5,8 +5,19 @@
             "location": ,
             "crew": [
                 {
-                    "name": ,
-                    "age": ,
+                    "name": 
+                },
+                {
+                    "name": 
+                },
+                {
+                    "name": 
+                },
+                {
+                    "name": 
+                },
+                {
+                    "name": 
                 }
             ],
             "club": ,
@@ -14,23 +25,199 @@
             "margin_over_second": ,
             "notes": ,
             "draw": 
-        }
-    ],
-    "women": [
+        },
         {
-            "date": ,
-            "location": ,
+            "date": "07-04-2024",
+            "location": "Amsterdam-Rijnkanaal",
             "crew": [
                 {
-                    "name": ,
-                    "age": ,
+                    "name": "Ellen Bijkerk"
+                },
+                {
+                    "name": "Pieter van Veen"
+                },
+                {
+                    "name": "Steven Bos"
+                },
+                {
+                    "name": "Bart Lauwers"
+                },
+                {
+                    "name": "Casper van der Steen"
                 }
             ],
-            "club": ,
-            "time": ,
-            "margin_over_second": ,
-            "notes": ,
-            "draw": 
-        }
-    ]
+            "club": "Triton",
+            "time": "09:52,13",
+            "margin_over_second": "03,66",
+            "notes": "Skoll ligt het grootste deel van deze race vooraan op dominante voorsprong, tot een grote snoek in het laatste deel van de race. Skoll had nog nooit een Varsity gewonnen.",
+            "draw": false
+        },
+        {
+            "date": "02-04-2023",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Ellen Bijkerk"
+                },
+                {
+                    "name": "Eli Brouwer"
+                },
+                {
+                    "name": "Bart Lauwers"
+                },
+                {
+                    "name": "Jaap Schenck"
+                },
+                {
+                    "name": "Casper van der Steen"
+                }
+            ],
+            "club": "Triton",
+            "time": "10:25,36",
+            "margin_over_second": "12,08",
+            "notes": "",
+            "draw": false
+        },
+        {
+            "date": "03-04-2022",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Carlen Upmeijer"
+                },
+                {
+                    "name": "Nelson Ritsema"
+                },
+                {
+                    "name": "Mick Makker"
+                },
+                {
+                    "name": "Michiel Mantel"
+                },
+                {
+                    "name": "Guus Mollee"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:59,99",
+            "margin_over_second": "06,55",
+            "notes": "",
+            "draw": false
+        },
+        {
+            "date": "13-04-2021",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Carien Upmeijer"
+                },
+                {
+                    "name": "Rik Rienks"
+                },
+                {
+                    "name": "Michiel Mantel"
+                },
+                {
+                    "name": "Mick Makker"
+                },
+                {
+                    "name": "Michiel Oyen"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:46,34",
+            "margin_over_second": "06,52",
+            "notes": "",
+            "draw": false
+        },
+        {
+            "date": "05-04-2020",
+            "location": "none",
+            "crew": [],
+            "club": "none",
+            "time": "00:00,00",
+            "margin_over_second": "00,00",
+            "notes": "Cancelled due to Covid-19",
+            "draw": false
+        },
+        {
+            "date": "07-04-2019",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Fiep Warmerdam"
+                },
+                {
+                    "name": "Kaj Hendriks"
+                },
+                {
+                    "name": "Jacob van de Kerkhof"
+                },
+                {
+                    "name": "Jakub Grabmuller"
+                },
+                {
+                    "name": "Harold Langen"
+                }
+            ],
+            "club": "Triton",
+            "time": "10:06,72",
+            "margin_over_second": "01,10",
+            "notes": "Eerste overwinning voor Triton in 52 jaar",
+            "draw": false
+        },
+        {
+            "date": "08-04-2018",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Dieuwke Fetter"
+                },
+                {
+                    "name": "Nelson Ritsema"
+                },
+                {
+                    "name": "Lex van den Herik"
+                },
+                {
+                    "name": "Tone Wieten"
+                },
+                {
+                    "name": "Abe Wiersma"
+                }
+            ],
+            "club": "Nereus",
+            "time": "09:45,05",
+            "margin_over_second": "03,46",
+            "notes": "",
+            "draw": false
+        },
+        {
+            "date": "09-04-2024",
+            "location": "Amsterdam-Rijnkanaal",
+            "crew": [
+                {
+                    "name": "Kimberly Kamp"
+                },
+                {
+                    "name": "Reinier Spillenaar Bilgen"
+                },
+                {
+                    "name": "Jasper Tissen"
+                },
+                {
+                    "name": "Floris von Bonninghausen"
+                },
+                {
+                    "name": "David Fox"
+                }
+            ],
+            "club": "Skadi",
+            "time": "09:53,08",
+            "margin_over_second": "01,50",
+            "notes": "",
+            "draw": false
+        },
+    ],
+    "women": []
 }

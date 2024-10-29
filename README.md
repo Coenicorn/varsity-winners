@@ -8,6 +8,12 @@ only the club who wins is recorded (because it's a
 team sport yadayada posh crap) and I wanted to know
 the rowers who won, so yeah, this is my attempt at that.
 
+## Contributing
+
+When this data is outdated or wrong, or you feel like there are improvements to be made, feel free to open an issue or a pull request!.
+
+If you know something cool about a specific edition of the varsity, pop it into the "notes" section!
+
 ## Data format
 
 The data is stored in a single JSON file.
@@ -22,14 +28,13 @@ The layout of the file and type of each field is as such:
             "location": string,
             "crew": [
                 {
-                    "name": string,
-                    "age": number,
+                    "name": string
                 },
                 ...
             ],
             "club": string,
-            "time": number,
-            "margin_over_second": number,
+            "time": string,
+            "margin_over_second": string,
             "notes": string,
             "draw": boolean
         },
@@ -42,8 +47,7 @@ The layout of the file and type of each field is as such:
             "location": string,
             "crew": [
                 {
-                    "name": string,
-                    "age": number,
+                    "name": string
                 },
                 ...
             ],
@@ -71,7 +75,7 @@ Here is a detailed explanation of each field:
 ### race 
 <br>
 
-`date` - The date of the event in DD:MM:YY notation
+`date` - The date of the event, formatted as such: "DD-MM-YY"
 <br>
 `location` - The location of the event, this has differed in the pas but has (as of 2024) settled on the Amsterdam-Rijnkanaal and is as such perhaps redundant for recent and future races
 <br>
@@ -79,9 +83,11 @@ Here is a detailed explanation of each field:
 <br>
 `club` - The name of the winning club.
 <br>
-`time` - The total time in milliseconds that the winner has taken to finish the race.
+`time` - The total time that the winner has taken to finish the race, formatted as such: "00:00,00" (minutes, seconds, hundredths)
 <br>
-`margin_over_second` - The total time in milliseconds that the winner was faster than the runner-up. This difference may not have been recorded / be difficult to find for older races so in that case the difference is 0
+`margin_over_second` - The total time in milliseconds that the winner was faster than the runner-up, formatted as such: "00,00" (seconds, milliseconds).
+<br>
+This difference may not have been recorded / be difficult to find for older races so in that case the difference is 0
 <br>
 `notes` - Optional notes for each race. Can contain trivia facts or important information about how a race transpired.
 <br>
@@ -91,7 +97,6 @@ Here is a detailed explanation of each field:
 <br>
 
 `name` - The name of the crew member
-`age` - The age of the crew member in integer years
 
 The position of the rower in the boat is tied to his index in the `crew` array, and is numbered as such:
 <br>
