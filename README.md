@@ -1,4 +1,4 @@
-![Varsity Logo](https://github.com/coenicorn/varsity-winners/varsity.png)
+![Varsity Logo](https://raw.githubusercontent.com/Coenicorn/varsity-winners/master/varsity.png)
 
 # Varsity Winners
 
