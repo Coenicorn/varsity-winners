@@ -1,3 +1,5 @@
+![Varsity Logo](https://github.com/coenicorn/varsity-winners/varsity.png)
+
 # Varsity Winners
 
 The Varsity is a dutch rowing event where the top
