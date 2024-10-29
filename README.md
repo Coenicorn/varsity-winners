@@ -8,10 +8,10 @@ The Varsity is a dutch rowing event where the top
 boats from dutch college rowing clubs compete on the
 notorious Amsterdam-Rijnkanaal. I could not find a
 list of *people* who have won this race, as usually
-only the club who wins is recorded (because it's a
-team sport yadayada posh crap) and I wanted to know
+only the club who wins is recorded and I wanted to know
 the rowers who won, so yeah, this is my attempt at that.
 <br>
+(also I know time team exists but now you know who won before time team was a thing)
 The data is meant to be read programmatically, so don't get mad at me for that
 
 ## Contributing
