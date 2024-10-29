@@ -10,9 +10,10 @@ the rowers who won, so yeah, this is my attempt at that.
 
 ## Contributing
 
-When this data is outdated or wrong, or you feel like there are improvements to be made, feel free to open an issue or a pull request!.
+When this data is outdated or wrong, or you feel like there are improvements to be made, feel free to open an issue or a pull request!
 
-If you know something cool about a specific edition of the varsity, pop it into the "notes" section!
+If you know something cool about a specific edition of the Varsity, pop it into the "notes" section! I'm a pretty young guy and generally don't know much
+about the sport and/or the history of it, so help is greatly appreciated!
 
 ## Data format
 
