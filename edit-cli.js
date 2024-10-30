@@ -165,15 +165,15 @@ async function editor(command) {
                 return;
             }
             let n_crew = Number(arguments[3]);
-            if (n_crew < 0 || n_crew > 4) {
+            if (n_crew < 1 || n_crew > 5) {
                 console.log(
                     "error: crew member " +
                     n_crew +
-                    " does not exist (allowed values: 0, 1, 2, 3, 4)"
+                    " does not exist (allowed values: 1, 2, 3, 4, 5 -> cox)"
                 );
                 return;
             }
-            let crewData = data.crew[n_crew];
+            let crewData = data.crew[n_crew-1];
 
             console.log("current value: " + crewData.name);
 
@@ -272,7 +272,8 @@ async function editor(command) {
                 return;
             }
 
-            if (data.sources.at(n_source) >= 0)
+            console.log("at: " + data.sources.at(n_source));
+            if (data.sources.at(n_source))
                 console.log("current value: " + data.sources.at(n_source));
             else console.log("adding new source");
 
@@ -280,7 +281,12 @@ async function editor(command) {
 
             writeStatus = writestat_unsavedchanges;
 
-            if (data.sources.at(n_source) < 0) {
+            if (data.sources.at(n_source) === undefined) {
+
+                // check if source already exists
+                // let existingInstances = varsity_data.sources.filter(s => s == varsity_data.sources[newValue]);
+
+
                 data.sources.push(newValue);
                 current_changes.push(`(${data.date}) new source '${newValue}'`);
             } else {
@@ -289,13 +295,16 @@ async function editor(command) {
                 );
 
                 data.sources[n_source] = newValue;
-                // remove empty sources
-                data.sources = data.sources.filter((source) => source.length === 0);
             }
+
+            // remove empty sources
+            data.sources = data.sources.filter(source => source != "");
         }
         break;
     }
 }
+
+("".toString() == "")
 
 async function mainCommandExec(command) {
     const arguments = command.split(" ");
@@ -475,7 +484,7 @@ async function main() {
                 ? "1 change"
                 : current_changes.length + " changes"
             }`
-      }) `,
+      }) > `,
             1
         );
 
