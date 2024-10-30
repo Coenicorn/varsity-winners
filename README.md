@@ -119,7 +119,7 @@ This difference may not have been recorded / be difficult to find for older race
 
 `name` - The name of the crew member
 
-The position of the rower in the boat is tied to his index in the `crew` array, and is numbered as such (mirroring the way [time-team](https://time-team.nl) lists crews):
+The position of the rower in the boat is tied to his index in the `crew` array, which is populated as such:
 <br>
 ```
 crew
