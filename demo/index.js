@@ -1,4 +1,4 @@
-{
+const varsity_data = {
     "men": [
         {
             "date": "07-04-2024",
@@ -4204,6 +4204,128 @@
             ]
         }
     ],
-    "women": [],
-    "version": "1.0.0"
+    "women": []
+};
+
+const varsity_sources = [
+    "https://regatta.time-team.nl/varsity/2024/results/e9900973e-ec18-4494-af93-ca8bd0c2699c.php",
+    "https://regatta.time-team.nl/varsity/2023/results/e0ed1fd0b-5350-4a69-8bd5-69aba9d38f2f.php",
+    "https://regatta.time-team.nl/varsity/2022/results/efdf13a4b-99e9-404e-b6c9-679c4426b8e8.php",
+    "https://regatta.time-team.nl/varsity/2021/results/e216de458-f3f4-454e-8c23-8188e6aad078.php",
+    "https://regatta.time-team.nl/varsity/2019/results/e7f0636c0-455f-4123-aa3f-ff2642ba7d58.php",
+    "https://regatta.time-team.nl/varsity/2018/results/001.php",
+    "https://regatta.time-team.nl/varsity/2017/results/001.php",
+    "https://regatta.time-team.nl/varsity/2016/results/001.php",
+    "https://regatta.time-team.nl/varsity/2015/results/001.php",
+    "https://regatta.time-team.nl/varsity/2014/results/001.php",
+    "https://regatta.time-team.nl/varsity/2013/results/matrix.php",
+    "https://regatta.time-team.nl/varsity/2012/results/001.php",
+    "https://regatta.time-team.nl/varsity/2011/results/001.php",
+    "https://www.mitchelsteenman.nl/blog-mitchel/13-varsity-2010",
+    "https://gyas.nl/m/actueel/verslagen?report_id=225",
+    "https://www.youtube.com/watch?v=CMj32vAHscU",
+    "https://www.rijnmond.nl/nieuws/26400/skadi-wint-126e-varsity",
+    "https://issuu.com/ppdemeijer/docs/roeien_uit_rotterdam_april_2009",
+    "https://dub.uu.nl/nl/content/skadi-wint-varsity-2009",
+    "https://www.skadi.nl/varsity",
+    "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=7473127e-ed06-4e4c-a156-f7f7114ebf13&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A7VFM-3D11-2RM0-C0N5-00000-00&pdcontentcomponentid=259070&pdteaserkey=sr2&pditab=allpods&ecomp=hc-yk&earg=sr2&prid=2c79f12f-fd3f-4550-9070-18b7cdf2f170",
+    "https://advance-lexis-com.hu.idm.oclc.org/api/document?collection=news&id=urn%3acontentItem%3a4S78-GBB0-TXKH-606W-00000-00&context=1519360&identityprofileid=MR9SPH56959",
+    "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=463e7690-7528-4ada-9976-76f6316a2516&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4NHC-FVM0-TX38-91SD-00000-00&pdcontentcomponentid=294311&pdteaserkey=sr12&pditab=allpods&ecomp=hc-yk&earg=sr12&prid=6ff890f2-de10-4703-857a-f659a2ec7a8a",
+    "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=93a8da09-36fd-4219-8760-ef94604ebdba&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4NH4-KK10-TXJ3-V1TP-00000-00&pdcontentcomponentid=259070&pdteaserkey=sr21&pditab=allpods&ecomp=hc-yk&earg=sr21&prid=31fccba7-3075-49e1-8241-fe56819dbaad",
+    "https://web.archive.org/web/20080412011202/http://www.knsrb.nl/index.php?id=189%2C0%2C0%2C1%2C0%2C0",
+    "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=3414fb93-da13-4572-b5e8-475202ad5fff&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4JP1-BJJ0-00J5-K4XY-00000-00&pdcontentcomponentid=168873&pdteaserkey=sr0&pditab=allpods&ecomp=hc-yk&earg=sr0&prid=07ba7a42-61d6-4ddb-9c55-8fe2b9467f1b",
+    "https://advance-lexis-com.hu.idm.oclc.org/document/?pdmfid=1519360&crid=7a8dbcbc-4b8a-4ae3-a0f5-9475b5f8714f&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A4JP1-TNX0-TX38-73BV-00000-00&pdcontentcomponentid=294313&pdteaserkey=sr12&pditab=allpods&ecomp=hc-yk&earg=sr12&prid=75f99b76-d505-42bf-905d-68015e09b2bd",
+    "https://web.archive.org/web/20030918025009/http://www.mijnlieff.nl/sport/roeien/varsity/varsity%20matrix.pdf"
+];
+
+function changeTextContent(elm, str) {
+    elm.innerHTML = elm.innerHTML.replace("placeholder", str);
 }
+
+function putDataInElement(elm, data) {
+
+    changeTextContent(elm.children[0], data.date);
+    changeTextContent(elm.children[1], data.location);
+    changeTextContent(elm.children[2], data.club);
+    changeTextContent(elm.children[3], data.time);
+    if (data.alt_margin != "") changeTextContent(elm.children[4], data.alt_margin);
+    else changeTextContent(elm.children[4], data.margin + "s");
+
+    for (let i = 0; i < data.crew.length; i++) {
+        elm.children[5].innerHTML += `<p class="info-item info-crew"><span>👥</span>${data.crew[i].name}</p>`;
+    }
+
+    for (let i = 0; i < data.notes.length; i++) {
+        elm.children[6].innerHTML += `<p class="info-item info-note"><span>📝</span>${data.notes[i]}</p>`;
+    }
+
+    for (let i = 0; i < data.sources.length; i++) {
+        elm.children[6].innerHTML += `<p class="info-item info-source"><span>ℹ️</span><a href="${varsity_sources[data.sources[i]]}">[source]</a></p>`;
+    }
+
+}
+
+let columns;
+
+async function sleep(ms) {
+    await new Promise((resolve, reject) => {
+        setTimeout(resolve, ms);
+    });
+}
+
+async function rerender() {
+    document.getElementsByClassName("grand-container")[0].textContent = "";
+
+    let copyElement = document.getElementById("copy-content");
+
+    let containers = [];
+
+    for (let i = 0; i < columns; i++) {
+        let elm = document.createElement("div");
+        elm.classList.add("column-container");
+        document.getElementsByClassName("grand-container")[0].appendChild(elm);
+        containers.push(elm);
+    }
+
+    let containerIndex = 0;
+
+    for (let i = 0; i < varsity_data.men.length; i++) {
+        let clonedElement = copyElement.cloneNode(true);
+        clonedElement.id = varsity_data.men[i].date;
+        clonedElement.classList.remove("invisible");
+
+        putDataInElement(clonedElement, varsity_data.men[i]);
+
+        containers[containerIndex].appendChild(clonedElement);
+
+        containerIndex++;
+        if (containerIndex >= columns) containerIndex = 0;
+    }
+}
+
+function applyMobileChanges() {
+    let change = 0;
+    if (document.body.clientWidth > document.body.clientHeight) {
+        // is landscape
+        if (columns == 2) change = 1;
+
+        columns = 5;
+    } else {
+        if (columns == 5) change = 1;
+
+        // is portrait
+        columns = 2;
+    }
+    if (change) rerender();
+}
+
+function main() {
+
+    applyMobileChanges();
+
+    rerender();
+
+    setInterval(applyMobileChanges, 500);
+}
+
+document.addEventListener("DOMContentLoaded", main);
