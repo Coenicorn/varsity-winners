@@ -16,6 +16,14 @@ As such, rowers who have won this race may not be forgotten. That's the philosop
 - [x] Source documentation
 - [x] Dates and Locations
 
+## Gratitude
+
+A major part of this project would not have been possible if not for some sources who have collected extensive data on older editions of the Varsity, data that even transcends the scope of this data set. Thanks to them!
+
+Here are those sources if you want to have a look yourself:
+- [boat composition](https://web.archive.org/web/20030918025009/http://www.mijnlieff.nl/sport/roeien/varsity/varsity%20matrix.pdf)
+- ['Stand der overwinningen'](https://web.archive.org/web/20080412011202/http://www.knsrb.nl/index.php?id=189%2C0%2C0%2C1%2C0%2C0)
+
 ## Contributing
 
 As in any historical dataset, additional data is always highly appreciated. If you know something about any specific editions of the Varsity that might be of value, open an issue and we can improve this data set together! If you want to contribute directly, open a pull request!
@@ -105,7 +113,7 @@ This difference may not have been recorded / be difficult to find for older race
 <br>
 `notes` - An array with notes for each race. Can contain trivia facts or important information about how a race transpired.
 <br>
-`sources` - List of indeces into `sources` array
+`sources` - List of indeces into sources array found in `varsity_winners_sources.json`
 
 `name` - The name of the crew member
 
