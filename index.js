@@ -14,7 +14,9 @@ function putDataInElement(elm, data) {
     else changeTextContent(elm.children[4], data.margin + "s");
 
     for (let i = 0; i < data.crew.length; i++) {
-        elm.children[5].innerHTML += `<p class="info-item info-crew"><span>👥</span>${data.crew[i].name}</p>`;
+        // last one cox
+        if (i == data.crew.length - 1) elm.children[5].innerHTML += `<p class="info-item info-crew"><span>🗣️</span>${data.crew[i].name}</p>`;
+        else elm.children[5].innerHTML += `<p class="info-item info-crew"><span>👥</span>${data.crew[i].name}</p>`;
     }
 
     for (let i = 0; i < data.notes.length; i++) {
