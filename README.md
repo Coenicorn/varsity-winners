@@ -100,6 +100,8 @@ Here is a detailed explanation of each field:
 <br>
 `sources` - An array of strings containing links to sources used
 
+The data stored for each race is ordered so that the latest varsity is always the first item in the array.
+
 ### race 
 <br>
 
