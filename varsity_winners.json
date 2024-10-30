@@ -25,7 +25,7 @@
             "alt_margin": "",
             "margin": "03,66",
             "notes": [
-                "Skoll ligt het grootste deel van deze race vooraan op dominante voorsprong, tot een grote snoek in het laatste deel van de race. Skoll had nog nooit een Varsity gewonnen."
+                "Skøll ligt het grootste deel van deze race vooraan op dominante voorsprong, tot een grote snoek in het laatste deel van de race. Skøll had nog nooit een Varsity gewonnen."
             ],
             "sources": [
                 0
@@ -85,7 +85,7 @@
             "alt_margin": "",
             "margin": "06,55",
             "notes": [
-                "Aan het begin van de race is er een (voor hen ten minste) racebeslissende aanvaring tussen Triton en Skoll, waardoor zij beiden stil komen te liggen en de race ver achter de anderen moeten afmaken"
+                "Aan het begin van de race is er een (voor hen ten minste) racebeslissende aanvaring tussen Triton en Skøll, waardoor zij beiden stil komen te liggen en de race ver achter de anderen moeten afmaken"
             ],
             "sources": [
                 2
@@ -4249,6 +4249,217 @@
             ]
         }
     ],
-    "women": [],
+    "women": [
+        {
+            "date": "07-04-2024",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Vera Versteegh"
+                },
+                {
+                    "name": "Wia Ruiter"
+                },
+                {
+                    "name": "Lydia Knevel"
+                },
+                {
+                    "name": "Trijntje van der Pijl"
+                }
+            ],
+            "club": "Orca",
+            "time": "06:52,19",
+            "alt_margin": "",
+            "margin": "02,32",
+            "notes": [],
+            "sources": [
+                34
+            ]
+        },
+        {
+            "date": "02-04-2023",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Lieke van Nieuwenhuizen"
+                },
+                {
+                    "name": "Marieke Keijser"
+                },
+                {
+                    "name": "Nienke von Hebel"
+                },
+                {
+                    "name": "Linn van Aanholt"
+                }
+            ],
+            "club": "Skadi",
+            "time": "07:19,78",
+            "alt_margin": "",
+            "margin": "08,12",
+            "notes": [],
+            "sources": [
+                33
+            ]
+        },
+        {
+            "date": "03-04-2022",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Martine Veldhuis"
+                },
+                {
+                    "name": "Karolien Florijn"
+                },
+                {
+                    "name": "Floor van Ameijde"
+                },
+                {
+                    "name": "Veronique Meester"
+                }
+            ],
+            "club": "Nereus",
+            "time": "07:01,14",
+            "alt_margin": "",
+            "margin": "05,63",
+            "notes": [],
+            "sources": [
+                32
+            ]
+        },
+        {
+            "date": "13-06-2021",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Jonneke Boere"
+                },
+                {
+                    "name": "Ashley Rijst"
+                },
+                {
+                    "name": "Nika Vos"
+                },
+                {
+                    "name": "Elsbeth Beeres"
+                }
+            ],
+            "club": "Skøll",
+            "time": "06:41,90",
+            "alt_margin": "",
+            "margin": "10,87",
+            "notes": [],
+            "sources": [
+                31
+            ]
+        },
+        {
+            "date": "07-04-2019",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Hijleke Nauta"
+                },
+                {
+                    "name": "Kim Janssen"
+                },
+                {
+                    "name": "Bente Paulis"
+                },
+                {
+                    "name": "Miriam Visser"
+                }
+            ],
+            "club": "Nereus",
+            "time": "07:41,69",
+            "alt_margin": "",
+            "margin": "12,23",
+            "notes": [],
+            "sources": [
+                30
+            ]
+        },
+        {
+            "date": "08-04-2018",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Ilse Paulis"
+                },
+                {
+                    "name": "Karien Robbers"
+                },
+                {
+                    "name": "Olivia van Rooijen"
+                },
+                {
+                    "name": "Veronique Meester"
+                }
+            ],
+            "club": "Nereus",
+            "time": "06:52,59",
+            "alt_margin": "",
+            "margin": "12,22",
+            "notes": [],
+            "sources": [
+                29
+            ]
+        },
+        {
+            "date": "09-04-2017",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": "Ilse Paulis"
+                },
+                {
+                    "name": "Veronique Meester"
+                },
+                {
+                    "name": "Kirsten Wielaard"
+                },
+                {
+                    "name": "Karien Robbers"
+                }
+            ],
+            "club": "Nereus",
+            "time": "07:04,02",
+            "alt_margin": "",
+            "margin": "04,14",
+            "notes": [
+                "Eerste dameschhoofdnummer op de Varsity"
+            ],
+            "sources": [
+                28
+            ]
+        },
+        {
+            "date": "",
+            "location": "Amsterdam-Rijnkanaal (Houten)",
+            "crew": [
+                {
+                    "name": ""
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": ""
+                }
+            ],
+            "club": "",
+            "time": "",
+            "alt_margin": "",
+            "margin": "",
+            "notes": [],
+            "sources": [
+                29
+            ]
+        }
+    ],
     "version": "1.0.0"
 }

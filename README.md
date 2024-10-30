@@ -38,8 +38,6 @@ Important points of improvement:
 
 * Most of the names in this document are abbreviated, because the main source I used for the majority of the names does so. If you know any of the names, please change them to the non-abbreviated versions and submit a pull request!
 
-* `unknown` names are clubs who've won of which names have not yet been found, please add them if you can
-
 * `women` is a work in progress
 
 ## Files
