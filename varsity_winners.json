@@ -4433,32 +4433,6 @@
             "sources": [
                 28
             ]
-        },
-        {
-            "date": "",
-            "location": "Amsterdam-Rijnkanaal (Houten)",
-            "crew": [
-                {
-                    "name": ""
-                },
-                {
-                    "name": ""
-                },
-                {
-                    "name": ""
-                },
-                {
-                    "name": ""
-                }
-            ],
-            "club": "",
-            "time": "",
-            "alt_margin": "",
-            "margin": "",
-            "notes": [],
-            "sources": [
-                29
-            ]
         }
     ],
     "version": "1.0.0"
