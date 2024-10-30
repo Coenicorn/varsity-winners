@@ -710,7 +710,7 @@
                     "name": "Benno Veenstra"
                 },
                 {
-                    "name": "unknown"
+                    "name": "M. van Ooijen"
                 }
             ],
             "club": "Orca",
@@ -728,19 +728,19 @@
             "location": "Amsterdam-Rijnkanaal (Houten)",
             "crew": [
                 {
-                    "name": "unknown"
+                    "name": "A.G.J. van Leeuwen"
                 },
                 {
-                    "name": "unknown"
+                    "name": "J.L. van der Noort"
                 },
                 {
-                    "name": "unknown"
+                    "name": "W.B. Diepenbroek"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Geert Cirkel"
                 },
                 {
-                    "name": "unknown"
+                    "name": "M. van Ooijen"
                 }
             ],
             "club": "Orca",
@@ -852,19 +852,19 @@
             "margin": "02,80",
             "crew": [
                 {
-                    "name": "unknown"
+                    "name": "A. van Eupen"
                 },
                 {
-                    "name": "unknown"
+                    "name": "J. Loefs"
                 },
                 {
-                    "name": "unknown"
+                    "name": "G. van Iwaarden"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Niels van Steenis"
                 },
                 {
-                    "name": "unknown"
+                    "name": "J. Webers"
                 }
             ],
             "notes": [],
@@ -1032,19 +1032,19 @@
             "margin": "12,80",
             "crew": [
                 {
-                    "name": "unknown"
+                    "name": "Theo Nieuwenboer"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Henk Jan Zwolle"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Ronald Florijn"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Nico Rienks"
                 },
                 {
-                    "name": "unknown"
+                    "name": "A. Roos"
                 }
             ],
             "notes": [],
@@ -1212,19 +1212,19 @@
             "margin": "06,00",
             "crew": [
                 {
-                    "name": "unknown"
+                    "name": "Richard Helsloot"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Paul Paulsen"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Jan Abelsma"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Steven van Groningen"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Ries Hendriks"
                 }
             ],
             "notes": [],
@@ -1302,19 +1302,19 @@
             "margin": "05,80",
             "crew": [
                 {
-                    "name": "unknown"
+                    "name": "W. van de Brink"
                 },
                 {
-                    "name": "unknown"
+                    "name": "D. Knopper"
                 },
                 {
-                    "name": "unknown"
+                    "name": "Marias van Dorp"
                 },
                 {
-                    "name": "unknown"
+                    "name": "H. Schreuder"
                 },
                 {
-                    "name": "unknown"
+                    "name": "H.D. Barentsen"
                 }
             ],
             "notes": [],
@@ -3462,19 +3462,31 @@
             "margin": "00,00",
             "crew": [
                 {
-                    "name": "excpt"
+                    "name": "L.Mangelaar Meertens"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.E.Moltzer"
                 },
                 {
-                    "name": "excpt"
+                    "name": "C.J.Schram"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.P.Delprat"
                 },
                 {
-                    "name": "excpt"
+                    "name": "L.C.Schram"
+                },
+                {
+                    "name": "G.A.Abendanon"
+                },
+                {
+                    "name": "A.L.J.Breebaart"
+                },
+                {
+                    "name": "J.W. Maas"
+                },
+                {
+                    "name": "H.W. ter Horst"
                 }
             ],
             "notes": [],
@@ -3492,19 +3504,31 @@
             "margin": "00,00",
             "crew": [
                 {
-                    "name": "excpt"
+                    "name": "L.Mangelaar Meertens"
                 },
                 {
-                    "name": "excpt"
+                    "name": "F.R.A. Stoll"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.T.C. Etty"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.P.Delprat"
                 },
                 {
-                    "name": "excpt"
+                    "name": "L.C.Schram"
+                },
+                {
+                    "name": "G.A.Abendanon"
+                },
+                {
+                    "name": "A.J.L.Breebaart"
+                },
+                {
+                    "name": "J.Versluys"
+                },
+                {
+                    "name": "H.W.Terhorst"
                 }
             ],
             "notes": [],
@@ -3522,19 +3546,31 @@
             "margin": "00,00",
             "crew": [
                 {
-                    "name": "excpt"
+                    "name": "L.Mangelaar Meertens"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.Versluys"
                 },
                 {
-                    "name": "excpt"
+                    "name": "A.L.J.Breebaart"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.P.Delprat"
                 },
                 {
-                    "name": "excpt"
+                    "name": "L.C.Schram"
+                },
+                {
+                    "name": "G.A.Abendanon"
+                },
+                {
+                    "name": "J.A.Reus"
+                },
+                {
+                    "name": "J.J.Canter Cremers"
+                },
+                {
+                    "name": "W.Meyer Timmerman Thyssen"
                 }
             ],
             "notes": [],
@@ -3552,19 +3588,28 @@
             "margin": "00,00",
             "crew": [
                 {
-                    "name": "excpt"
+                    "name": "E.Pino"
                 },
                 {
-                    "name": "excpt"
+                    "name": "D.J.Jongeneel"
                 },
                 {
-                    "name": "excpt"
+                    "name": "H.T.Tromp"
                 },
                 {
-                    "name": "excpt"
+                    "name": "H.K.Offerhaus"
                 },
                 {
-                    "name": "excpt"
+                    "name": "J.J.Krantz"
+                },
+                {
+                    "name": "S.W.Tromp"
+                },
+                {
+                    "name": "W.Middelberg"
+                },
+                {
+                    "name": "E.Ch.Grivel"
                 }
             ],
             "notes": [],
