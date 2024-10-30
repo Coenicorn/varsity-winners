@@ -4,110 +4,93 @@
 
 # Varsity Winners
 
-The Varsity is a dutch rowing event where the top
-boats from dutch college rowing clubs compete on the
-notorious Amsterdam-Rijnkanaal. I could not find a
-list of *people* who have won this race, as usually
-only the club who wins is recorded and I wanted to know
-the rowers who won, so yeah, this is my attempt at that.
-<br>
-(also I know time team exists but now you know who won before time team was a thing)
-<br>
-The data is meant to be read programmatically, so don't get mad at me for that
+The [Varsity](https://knsrb.nl/varsity/) is a historic Dutch rowing event during which the top college crews from all over the country compete to win the 'Oude Vier' (the top men's [coxed four](https://en.wikipedia.org/wiki/Coxed_four)).
+
+The first edition of this event was held in 1878, and it's consistently been rowed ever since. Winning the Varsity is truly something remarkable, and a major goal for every college rower. Many of the great olympic rowers of the Netherlands have won it, and have stated that the event carries the same weight as even major international races.
+
+As such, rowers who have won this race may not be forgotten. That's the philosophy behind this repository.
+
+- [x] Data dating back to the first Varsity in 1878
+- [x] Names of rowers and coxes
+- [x] Race times
+- [x] Source documentation
+- [x] Dates and Locations
 
 ## Contributing
 
-When this data is outdated or wrong, or you feel like there are improvements to be made, feel free to open an issue or a pull request!
+As in any historical dataset, additional data is always highly appreciated. If you know something about any specific editions of the Varsity that might be of value, open an issue and we can improve this data set together! If you want to contribute directly, open a pull request!
 
-If you know something cool about a specific edition of the Varsity, pop it into the "notes" section! I'm a pretty young guy and generally don't know much
-about the sport and/or the history of it, so help is greatly appreciated!
+Trivia and fun facts are always appreciated aswell!
 
-Most of the names in this document are abbreviated, because the main source I used for the majority of the names does so. If you know any of the names, please change them to the non-abbreviated versions and submit a pull request!
+Important points of improvement:
 
-`unknown` names are clubs who've won that weren't mentioned in my main source, so if you can find them, hats off to you!
+* Most of the names in this document are abbreviated, because the main source I used for the majority of the names does so. If you know any of the names, please change them to the non-abbreviated versions and submit a pull request!
 
-`women` is a work in progress
+* `unknown` names are clubs who've won of which names have not yet been found, please add them if you can
 
-## Data format
+* `women` is a work in progress
 
-The data is stored in a single JSON file.
-The layout of the file and type of each field is as such:
+## Files
+
+The dataset consists of 2 files: varsity_winners.json and varsity_winners_sources.json. The first file stores the data for each race and the second stores the sources used for the first. These sources are links to data sources all across the web. A detailed description of the json schema can be found below.
+
+## Schema
+
+Below is a detailed description of the JSON schema for the `varsity_winners.json` file.
 
 ```javascript
-
 {
-    "men": [
+    men: [
         {
-            "date": string,
-            "location": string,
-            "crew": [
+            date: String,
+            location: String,
+            club: String,
+            time: String,
+            margin_over_second: String,
+            alt_margin: String,
+            notes: String,
+            sources: [Number]
+            crew: [
                 {
-                    "name": string
+                    name: String
                 },
                 ...
-            ],
-            "club": string,
-            "time": string,
-            "alt_margin": string,
-            "margin_over_second": string,
-            "notes": string,
-            "sources": [
-                number, number
             ]
         },
         ...
     ],
-    "women": [
-        ...,
+    women: [
         {
-            "date": string,
-            "location": string,
-            "crew": [
+            date: String,
+            location: String,
+            club: String,
+            time: String,
+            margin_over_second: String,
+            alt_margin: String,
+            notes: String,
+            sources: [Number]
+            crew: [
                 {
-                    "name": string
+                    name: String
                 },
                 ...
-            ],
-            "club": string,
-            "time": number,
-            "alt_margin": string,
-            "margin_over_second": number,
-            "notes": string,
-            "sources": [
-                number, number
             ]
         },
         ...
-    ],
-    "sources": [
-        string,
-        string,
-        ...,
-        string
     ]
 }
-
 ```
 
-Here is a detailed explanation of each field:
 
-### root
+`men` - An array of objects containing race data for the men's races
 <br>
+`women` - An array of objects containing race data for the women's races
 
-`men` - An array of objects containing race data for the men's fours (<i><b>NL</b></i> Oude Vieren)
-<br>
-`women` - An array of objects containing race data for the women's fours (<i><b>NL</b></i> Dames Vieren)
-<br>
-`sources` - An array of strings containing links to sources used
-
-The data stored for each race is ordered so that the latest varsity is always the first item in the array.
-
-### race 
-<br>
+The data stored for each race is ordered so that the latest varsity is always at `data.men[0]` and `data.women[0]` respectively
 
 `date` - The date of the event, formatted as such: "DD-MM-YY"
 <br>
-`location` - The location of the event, this has differed in the pas but has (as of 2024) settled on the Amsterdam-Rijnkanaal and is as such perhaps redundant for recent and future races
+`location` - The location of the event. 
 <br>
 `crew` - An array of object containing crew data for each crew member.
 <br>
@@ -115,32 +98,27 @@ The data stored for each race is ordered so that the latest varsity is always th
 <br>
 `time` - The total time that the winner has taken to finish the race, formatted as such: "00:00,00" (minutes, seconds, hundredths)
 <br>
-`margin_over_second` - The total time in milliseconds that the winner was faster than the runner-up, formatted as such: "00,00" (seconds, milliseconds).
-<br>
+`margin_over_second` - The total time that the winner was faster than the runner-up, formatted as such: "00,00" (seconds, hundredths).
 This difference may not have been recorded / be difficult to find for older races so in that case the difference is "00,00"
 <br>
 `alt_margin` - The alternative margin string if the margin (historically) is not numerical. Some older editions store the margins in 'lengths' and such terms. <b>This field is empty (`""`) by default, so if it is NOT, then the alternative margin MUST be used.</b>
 <br>
-`notes` - Optional notes for each race. Can contain trivia facts or important information about how a race transpired.
+`notes` - An array with notes for each race. Can contain trivia facts or important information about how a race transpired.
 <br>
 `sources` - List of indeces into `sources` array
 
-### crew
-<br>
-
 `name` - The name of the crew member
 
-The position of the rower in the boat is tied to his index in the `crew` array, and is numbered as such (copying the way [time-team](https://time-team.nl) does it):
+The position of the rower in the boat is tied to his index in the `crew` array, and is numbered as such (mirroring the way [time-team](https://time-team.nl) lists crews):
 <br>
 ```
 crew
 [
     bow,
-    2,
-    3,
+    ...,
     stroke,
     cox
 ]
 ```
 
-Thanks for reading this far <3
+<b>Some earlier races had 8 rowers +cox instead of the modern 4 +cox, so any program using this dataset will have to handle this exception</b>
