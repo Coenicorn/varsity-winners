@@ -38,8 +38,6 @@ Important points of improvement:
 
 * Most of the names in this document are abbreviated, because the main source I used for the majority of the names does so. If you know any of the names, please change them to the non-abbreviated versions and submit a pull request!
 
-* `women` is a work in progress
-
 ## Files
 
 The dataset consists of 2 files: varsity_winners.json and varsity_winners_sources.json. The first file stores the data for each race and the second stores the sources used for the first. These sources are links to data sources all across the web. A detailed description of the json schema can be found below.
