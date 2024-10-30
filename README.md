@@ -135,10 +135,10 @@ The position of the rower in the boat is tied to his index in the `crew` array, 
 ```
 crew
 [
-    stroke,
-    3,
-    2,
     bow,
+    2,
+    3,
+    stroke,
     cox
 ]
 ```
