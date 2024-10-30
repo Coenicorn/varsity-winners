@@ -58,7 +58,7 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
             location: String,
             club: String,
             time: String,
-            margin_over_second: String,
+            margin: String,
             alt_margin: String,
             notes: String,
             sources: [Number]
@@ -77,7 +77,7 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
             location: String,
             club: String,
             time: String,
-            margin_over_second: String,
+            margin: String,
             alt_margin: String,
             notes: String,
             sources: [Number]
@@ -89,7 +89,8 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
             ]
         },
         ...
-    ]
+    ],
+    version: String
 }
 ```
 
@@ -97,7 +98,8 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
 `men` - An array of objects containing race data for the men's races
 <br>
 `women` - An array of objects containing race data for the women's races
-
+<br>
+`version` - A string to store the current version
 The data stored for each race is ordered so that the latest varsity is always at `data.men[0]` and `data.women[0]` respectively
 
 `date` - The date of the event, formatted as such: "DD-MM-YY"
@@ -110,7 +112,7 @@ The data stored for each race is ordered so that the latest varsity is always at
 <br>
 `time` - The total time that the winner has taken to finish the race, formatted as such: "00:00,00" (minutes, seconds, hundredths)
 <br>
-`margin_over_second` - The total time that the winner was faster than the runner-up, formatted as such: "00,00" (seconds, hundredths).
+`margin` - The total time that the winner was faster than the runner-up, formatted as such: "00,00" (seconds, hundredths).
 This difference may not have been recorded / be difficult to find for older races so in that case the difference is "00,00"
 <br>
 `alt_margin` - The alternative margin string if the margin (historically) is not numerical. Some older editions store the margins in 'lengths' and such terms. <b>This field is empty (`""`) by default, so if it is NOT, then the alternative margin MUST be used.</b>

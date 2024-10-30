@@ -1,0 +1,102 @@
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(128, 150, 184);
+
+    font-family: monospace;
+
+    color: rgb(44, 44, 44)
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 1em;
+}
+
+.invisible {
+    opacity: 0;
+    position: absolute;
+    display: none;
+}
+
+.grand-container {
+    display: inline block;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+    width: 48vw;
+    float: left;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+@media (orientation:landscape) {
+    .column-container {
+        width: 18vw;
+    }
+}
+
+.info-container {
+    width: 100%;
+    float: left;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    margin-bottom: 2vw;
+}
+
+.info-item {
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+span {
+    float: left;
+}
+
+.info-date {
+    background-color: #ffafad;
+}
+
+.info-location {
+    background-color: #ffd6a5;
+}
+
+.info-club {
+    background-color: #fcfeb6;
+}
+
+.info-time {
+    background-color: #cafebf;
+}
+
+.info-margin {
+    background-color: #9df3fd;
+}
+
+.info-crew {
+    background-color: #a2c3fd;
+}
+
+.info-note {
+    background-color: #bfb3fd;
+}
+
+.info-source {
+    background-color: #ffc7fc;
+}
