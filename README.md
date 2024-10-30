@@ -26,6 +26,8 @@ Most of the names in this document are abbreviated, because the main source I us
 
 `unknown` names are clubs who've won that weren't mentioned in my main source, so if you can find them, hats off to you!
 
+`women` is a work in progress
+
 ## Data format
 
 The data is stored in a single JSON file.
