@@ -11,9 +11,13 @@ The first edition of this event was held in 1878, and it's consistently been row
 As such, rowers who have won this race may not be forgotten. That's the philosophy behind this repository.
 
 :white_check_mark: Data dating back to the first Varsity in 1878
+<br>
 :white_check_mark: Names of rowers and coxes
+<br>
 :white_check_mark: Race times
+<br>
 :white_check_mark: Source documentation
+<br>
 :white_check_mark: Dates and Locations
 
 ## Gratitude
