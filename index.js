@@ -67,9 +67,9 @@ async function fillContainerWithData(container, dataSource) {
         titleElement.appendChild(titleElm);
         // rest in dropdown div
         dropdownElement.appendChild(newInfoItem("info-location", "🌎", dataSource[i].location));
-        dropdownElement.appendChild(newInfoItem("info-club", "🏷️", dataSource[i].club));
+        dropdownElement.appendChild(newInfoItem("info-club", "🥇", dataSource[i].club));
         dropdownElement.appendChild(newInfoItem("info-time", "⏱️", dataSource[i].time));
-        dropdownElement.appendChild(newInfoItem("info-margin", "🥈", dataSource[i].alt_margin == "" ? (/^\d{2},\d{2}$/.test(dataSource[i].margin) ? dataSource[i].margin + "s" : dataSource[i].margin) : dataSource[i].alt_margin));
+        dropdownElement.appendChild(newInfoItem("info-margin", "🥈", "+" + (dataSource[i].alt_margin == "" ? dataSource[i].margin : dataSource[i].alt_margin)));
         for (let j = 0; j < dataSource[i].crew.length - 1; j++) {
             dropdownElement.appendChild(newInfoItem("info-crew", "👥", dataSource[i].crew[j].name));
         }
