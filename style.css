@@ -13,13 +13,30 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1em;
+
+    background-color: rgb(169, 186, 211);
+
+    text-align: center;
+}
+
+.util-functions {
+    padding: .5vw;
+}
+
+button {
+    margin: 2px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.not-bold {
+    font-size: 1em;
+    font-weight: normal;
 }
 
 h1 {
-    margin: 1em;
+    margin: 0;
 }
 
 .invisible {
@@ -37,23 +54,20 @@ h1 {
     flex-direction: column;
     width: 48vw;
     float: left;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: .5vw;
+    padding-right: .5vw;
 }
 
 @media (orientation:landscape) {
     .column-container {
-        width: 18vw;
+        width: 19vw;
     }
 }
 
 .info-container {
     width: 100%;
     float: left;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
 }
 
 .info-item {
@@ -62,15 +76,39 @@ h1 {
     font-weight: 600;
     text-align: center;
     margin: 0;
-    border-bottom: 1px solid black;
 }
 
 span {
     float: left;
 }
 
+.copy-button {
+    float: right;
+    padding-left: .5em;
+    padding-right: .5em;
+    cursor: pointer;
+    scale: .8;
+}
+
+.copy-button:hover {
+    background-color: rgba(255, 255, 255, 0.651);
+}
+
 .info-date {
     background-color: #ffafad;
+
+    /* dropdown */
+    cursor: pointer;    
+}
+
+.info-date:hover {
+    background-color: #ff8f8d;
+}
+
+.dropdown {
+    position: relative;
+    width: 90%;
+    left: 5%;
 }
 
 .info-location {

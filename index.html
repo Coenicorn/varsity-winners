@@ -8,22 +8,18 @@
 </head>
 <body>
     <div class="header">
-        <h1>Dit zijn de winnaren der jaarlijkse Varsity door den jaren heen:</h1>
-        <button id="gender-change-lmao"><h2>Data voor andere gender</h2></button>
-        <h1 id="feedback"><a href="https://github.com/Coenicorn/varsity-winners/issues/new/choose" target="_blank">Geef feedback</a></h1>
+        <h1>Varsity Winnaars</h1>
     </div>
-    
-    <div class="info-container invisible" id="copy-content">
-        <p class="info-item info-date"><span>📅</span>placeholder</p>
-        <p class="info-item info-location"><span>🌎</span>placeholder</p>
-        <p class="info-item info-club"><span>🏷️</span>placeholder</p>
-        <p class="info-item info-time"><span>⏱️</span>placeholder</p>
-        <p class="info-item info-margin"><span>🥈</span>placeholder</p>
-        <div class="crew-container">
+
+    <div class="util-functions">
+        <button onclick="expandCollapseAll()" id="expand-button">expand all</button>
+        <button onclick="switchGender()">switch gender<br><span class="not-bold" id="current-gender">now: mannen</span></button>
+    </div>
+
+    <div class="invisible" id="copy-content">
+        <div class="info-dropdown-title">
         </div>
-        <div class="notes-container">
-        </div>
-        <div class="sources-container">
+        <div class="dropdown invisible">
         </div>
     </div>
 
