@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background-color: rgb(128, 150, 184);
+    background-color: #004e89;
 
     font-family: monospace;
 
@@ -15,7 +15,7 @@ body {
 .header {
     padding: 1em;
 
-    background-color: rgb(169, 186, 211);
+    background-color: #1a659e;
 
     text-align: center;
 }
@@ -95,14 +95,14 @@ span {
 }
 
 .info-date {
-    background-color: #ffafad;
+    background-color: #f7b801;
 
     /* dropdown */
     cursor: pointer;    
 }
 
 .info-date:hover {
-    background-color: #ff8f8d;
+    background-color: #ffc726;
 }
 
 .dropdown {
@@ -112,29 +112,29 @@ span {
 }
 
 .info-location {
-    background-color: #ffd6a5;
+    background-color: #FFD57E;
 }
 
 .info-club {
-    background-color: #fcfeb6;
+    background-color: #FFEFA0;
 }
 
 .info-time {
-    background-color: #cafebf;
+    background-color: #FFD57E;
 }
 
 .info-margin {
-    background-color: #9df3fd;
+    background-color: #FFEFA0;
 }
 
 .info-crew {
-    background-color: #a2c3fd;
+    background-color: #FFD57E;
 }
 
 .info-note {
-    background-color: #bfb3fd;
+    background-color: #FFEFA0;
 }
 
 .info-source {
-    background-color: #ffc7fc;
+    background-color: #FFD57E;
 }
