@@ -1132,13 +1132,15 @@
                     "name": "M. Algie"
                 },
                 {
-                    "name": "R.H.A. Wessel"
+                    "name": "Ruud H.A. Wessel"
                 },
                 {
                     "name": "D.I.P. Dijkhuis"
                 }
             ],
-            "notes": [],
+            "notes": [
+                "Finishtijd onbekend"
+            ],
             "sources": [
                 24,
                 27
@@ -1186,10 +1188,10 @@
                     "name": "G.D. Algie"
                 },
                 {
-                    "name": "W.J.R. de Widt"
+                    "name": "M. Algie"
                 },
                 {
-                    "name": "M. Algie"
+                    "name": "W.J.R. de Widt"
                 },
                 {
                     "name": "R.H.A. Wessel"
@@ -1198,10 +1200,13 @@
                     "name": "A.Y.L. Kwee"
                 }
             ],
-            "notes": [],
+            "notes": [
+                
+            ],
             "sources": [
                 24,
-                27
+                27,
+                37
             ]
         },
         {
