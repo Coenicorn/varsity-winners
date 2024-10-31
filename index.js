@@ -4,32 +4,6 @@ function changeTextContent(elm, str) {
     elm.innerHTML = elm.innerHTML.replace("placeholder", str);
 }
 
-function putDataInElement(elm, data) {
-
-    changeTextContent(elm.children[0], data.location);
-    changeTextContent(elm.children[1], data.club);
-    changeTextContent(elm.children[2], data.time);
-
-    // use alt_margin if it is not empty
-    if (data.alt_margin != "") changeTextContent(elm.children[4], data.alt_margin);
-    else changeTextContent(elm.children[3], data.margin + "s");
-
-    for (let i = 0; i < data.crew.length; i++) {
-        // last one cox
-        if (i == data.crew.length - 1) elm.children[4].innerHTML += `<p class="info-item info-crew"><span>🗣️</span>${data.crew[i].name}</p>`;
-        else elm.children[4].innerHTML += `<p class="info-item info-crew"><span>👥</span>${data.crew[i].name}</p>`;
-    }
-
-    for (let i = 0; i < data.notes.length; i++) {
-        elm.children[5].innerHTML += `<p class="info-item info-note"><span>📝</span>${data.notes[i]}</p>`;
-    }
-
-    for (let i = 0; i < data.sources.length; i++) {
-        elm.children[6].innerHTML += `<p class="info-item info-source"><span></span><a href="${varsity_sources[data.sources[i]]}">[source]</a></p>`;
-    }
-
-}
-
 let columns;
 
 let dataSource;
