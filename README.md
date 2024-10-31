@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Coenicorn/varsity-winners/master/varsity.png" />
+  <img src="https://raw.githubusercontent.com/Coenicorn/varsity-winners/demo-site/assets/varsity.png" />
 </p>
 
 # Demo site

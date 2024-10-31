@@ -4,34 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>varsity winners</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <h1>Varsity Winners</h1>
-        <h2 id="feedback-link"><a href="https://github.com/Coenicorn/varsity-winners/issues/new">Feedback</a></h2>
-    </div>
-
-    <div class="util-functions">
-        <button onclick="expandCollapseAll()" id="expand-button">expand all</button>
-        <button onclick="switchGender()">switch gender<br><span class="not-bold" id="current-gender">now: mannen</span></button>
     </div>
 
     <div class="invisible" id="copy-content">
@@ -42,12 +37,20 @@
     </div>
 
     <div class="grand-container">
-        <h1>Loading...</h1>
+        <div class="data-container-wrapper" id="wrapper-men">
+            <h1>men</h1>
+            <div class="column-container" id="column-container-men"></div>
+        </div>
+        <div class="data-container-wrapper" id="wrapper-women">
+            <h1>women</h1>
+            <div class="column-container" id="column-container-women"></div>
+        </div>
     </div>
 
-    <script>
+    <!-- <script>
         /* https://www.toptal.com/developers/javascript-minifier */
-        let varsity_data,varsity_sources;function changeTextContent(e,n){e.innerHTML=e.innerHTML.replace("placeholder",n)}let columns,dataSource,collapseStatus="expand all";async function sleep(e){await new Promise((n,t)=>{setTimeout(n,e)})}function newSourceItem(e,n,t){let a=document.createElement("p");a.classList.add(e),a.classList.add("info-item");let s=document.createElement("span");s.innerHTML+=n,s.classList.add("emoji"),a.appendChild(s);let o=document.createElement("a");return o.innerHTML="source",o.href=t,a.appendChild(o),a}function newInfoItem(e,n,t){let a=document.createElement("p");a.classList.add(e),a.classList.add("info-item");let s=document.createElement("span");return s.innerHTML+=n,s.classList.add("emoji"),a.appendChild(s),a.innerHTML+=t,a}async function rerender(){document.getElementsByClassName("grand-container")[0].textContent="";let e=document.getElementById("copy-content"),n=[];for(let t=0;t<columns;t++){let a=document.createElement("div");a.classList.add("column-container"),document.getElementsByClassName("grand-container")[0].appendChild(a),n.push(a)}let s=0;for(let o=0;o<dataSource.length;o++){let l=e.cloneNode(!0);l.id=dataSource[o].date,l.classList.remove("invisible"),l.classList.add("info-container");let i=l.getElementsByClassName("info-dropdown-title")[0],r=l.getElementsByClassName("dropdown")[0];i.appendChild(newInfoItem("info-date","\uD83D\uDCC5",dataSource[o].date)),r.appendChild(newInfoItem("info-location","\uD83C\uDF0E",dataSource[o].location)),r.appendChild(newInfoItem("info-club","\uD83C\uDFF7️",dataSource[o].club)),r.appendChild(newInfoItem("info-time","⏱️",dataSource[o].time)),r.appendChild(newInfoItem("info-margin","\uD83E\uDD48",""==dataSource[o].alt_margin?/^\d{2},\d{2}$/.test(dataSource[o].margin)?dataSource[o].margin+"s":dataSource[o].margin:dataSource[o].alt_margin));for(let d=0;d<dataSource[o].crew.length-1;d++)r.appendChild(newInfoItem("info-crew","\uD83D\uDC65",dataSource[o].crew[d].name));r.appendChild(newInfoItem("info-crew",dataSource==varsity_data.men?"\uD83D\uDDE3️":"\uD83D\uDC65",dataSource[o].crew[dataSource[o].crew.length-1].name));for(let c=0;c<dataSource[o].notes.length;c++)r.appendChild(newInfoItem("info-note","\uD83D\uDCDD",dataSource[o].notes[c]));for(let m=0;m<dataSource[o].sources.length;m++)r.appendChild(newSourceItem("info-source","ℹ️",varsity_sources[dataSource[o].sources[m]]));n[s].appendChild(l),++s>=columns&&(s=0)}for(let u=document.getElementsByClassName("info-container"),p=u.length,f=0;f<p;f++){let h=u[f],g=h.getElementsByClassName("info-date")[0],w=h.getElementsByClassName("dropdown")[0];g.addEventListener("click",()=>{w.classList.contains("invisible")?w.classList.remove("invisible"):w.classList.add("invisible")})}}function applyMobileChanges(){let e=0;document.body.clientWidth>document.body.clientHeight?(2==columns&&(e=1),columns=5):(5==columns&&(e=1),columns=2),e&&rerender()}async function getSources(){await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners.json").then(e=>e.json()).then(e=>varsity_data=e),await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners_sources.json").then(e=>e.json()).then(e=>varsity_sources=e),dataSource=varsity_data.men}async function main(){await getSources(),applyMobileChanges(),rerender(),setInterval(applyMobileChanges,500)}function expandCollapseAll(){let e=document.getElementsByClassName("dropdown");if("expand all"==collapseStatus){for(let n=0,t=e.length;n<t;n++)e[n].classList.remove("invisible");collapseStatus="collapse all"}else{for(let a=0,s=e.length;a<s;a++)e[a].classList.add("invisible");collapseStatus="expand all"}document.getElementById("expand-button").innerHTML=collapseStatus}function switchGender(){let e=document.getElementById("current-gender");dataSource==varsity_data.men?(dataSource=varsity_data.women,e.innerHTML="now: damesch"):(dataSource=varsity_data.men,e.innerHTML="now: mannen"),rerender()}document.addEventListener("DOMContentLoaded",main);
-    </script>
+        let varsity_data,varsity_sources;const varsity_data_url="https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners.json",varsity_sources_url="https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners_sources.json";function changeTextContent(e,n){e.innerHTML=e.innerHTML.replace("placeholder",n)}let columns,dataSource,collapseStatus="expand all";async function sleep(e){await new Promise((n,t)=>{setTimeout(n,e)})}function newSourceItem(e,n,t){let a=document.createElement("p");a.classList.add(e),a.classList.add("info-item");let s=document.createElement("span");s.innerHTML+=n,s.classList.add("emoji"),a.appendChild(s);let o=document.createElement("a");return o.innerHTML="source",o.href=t,o.target="_blank",a.appendChild(o),a}function newInfoItem(e,n,t){let a=document.createElement("p");a.classList.add(e),a.classList.add("info-item");let s=document.createElement("span");return s.innerHTML+=n,s.classList.add("emoji"),a.appendChild(s),a.innerHTML+=t,a}async function rerender(){document.getElementsByClassName("grand-container")[0].textContent="";let e=document.getElementById("copy-content"),n=[];for(let t=0;t<columns;t++){let a=document.createElement("div");a.classList.add("column-container"),document.getElementsByClassName("grand-container")[0].appendChild(a),n.push(a)}let s=0;for(let o=0;o<dataSource.length;o++){let i=e.cloneNode(!0);i.id=dataSource[o].date,i.classList.remove("invisible"),i.classList.add("info-container");let r=i.getElementsByClassName("info-dropdown-title")[0],l=i.getElementsByClassName("dropdown")[0];r.appendChild(newInfoItem("info-date","\uD83D\uDCC5",dataSource[o].date)),l.appendChild(newInfoItem("info-location","\uD83C\uDF0E",dataSource[o].location)),l.appendChild(newInfoItem("info-club","\uD83C\uDFF7️",dataSource[o].club)),l.appendChild(newInfoItem("info-time","⏱️",dataSource[o].time)),l.appendChild(newInfoItem("info-margin","\uD83E\uDD48",""==dataSource[o].alt_margin?/^\d{2},\d{2}$/.test(dataSource[o].margin)?dataSource[o].margin+"s":dataSource[o].margin:dataSource[o].alt_margin));for(let c=0;c<dataSource[o].crew.length-1;c++)l.appendChild(newInfoItem("info-crew","\uD83D\uDC65",dataSource[o].crew[c].name));l.appendChild(newInfoItem("info-crew",dataSource==varsity_data.men?"\uD83D\uDDE3️":"\uD83D\uDC65",dataSource[o].crew[dataSource[o].crew.length-1].name));for(let d=0;d<dataSource[o].notes.length;d++)l.appendChild(newInfoItem("info-note","\uD83D\uDCDD",dataSource[o].notes[d]));for(let u=0;u<dataSource[o].sources.length;u++)l.appendChild(newSourceItem("info-source","ℹ️",varsity_sources[dataSource[o].sources[u]]));n[s].appendChild(i),++s>=columns&&(s=0)}for(let m=document.getElementsByClassName("info-container"),p=m.length,f=0;f<p;f++){let h=m[f],w=h.getElementsByClassName("info-date")[0],y=h.getElementsByClassName("dropdown")[0];w.addEventListener("click",()=>{y.classList.contains("invisible")?y.classList.remove("invisible"):y.classList.add("invisible")})}}function applyMobileChanges(){let e=0;document.body.clientWidth>document.body.clientHeight?(2==columns&&(e=1),columns=5):(5==columns&&(e=1),columns=2),e&&rerender()}async function getSources(){await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners.json").then(e=>e.json()).then(e=>varsity_data=e),await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners_sources.json").then(e=>e.json()).then(e=>varsity_sources=e),dataSource=varsity_data.men}async function main(){await getSources(),applyMobileChanges(),rerender(),setInterval(applyMobileChanges,500)}function expandCollapseAll(){let e=document.getElementsByClassName("dropdown");if("expand all"==collapseStatus){for(let n=0,t=e.length;n<t;n++)e[n].classList.remove("invisible");collapseStatus="collapse all"}else{for(let a=0,s=e.length;a<s;a++)e[a].classList.add("invisible");collapseStatus="expand all"}document.getElementById("expand-button").innerHTML=collapseStatus}function switchGender(){let e=document.getElementById("current-gender");dataSource==varsity_data.men?(dataSource=varsity_data.women,e.innerHTML="now: damesch"):(dataSource=varsity_data.men,e.innerHTML="now: mannen"),rerender()}document.addEventListener("DOMContentLoaded",main);
+    </script> -->
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,12 +1,15 @@
 let varsity_data, varsity_sources;
+const varsity_data_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners.json";
+const varsity_sources_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners_sources.json";
 
 function changeTextContent(elm, str) {
     elm.innerHTML = elm.innerHTML.replace("placeholder", str);
 }
 
-let columns;
+const portraitColumns = 1;
+const landscapeColumns = 1;
 
-let dataSource;
+let columns = portraitColumns;
 
 let collapseStatus = "expand all";
 
@@ -16,26 +19,6 @@ async function sleep(ms) {
     });
 }
 
-function newSourceItem(type, title, value) {
-    let elm = document.createElement("p");
-
-    elm.classList.add(type);
-    elm.classList.add("info-item");
-
-    let titleElm = document.createElement("span");
-    titleElm.innerHTML += title;
-    titleElm.classList.add("emoji");
-
-    elm.appendChild(titleElm);
-
-    let link = document.createElement("a");
-    link.innerHTML = "source";
-    link.href = value;
-
-    elm.appendChild(link);
-
-    return elm;
-}
 
 function newInfoItem(type, title, value) {
     let elm = document.createElement("p");
@@ -51,36 +34,22 @@ function newInfoItem(type, title, value) {
 
     elm.innerHTML += value;
 
-    // let copy = document.createElement("span");
-    // copy.classList.add("copy-button");
-    // copy.title = "copy value";
-    // copy.innerHTML += "📋";
-
-    // copy.onclick = () => navigator.clipboard.writeText(value);
-
-    // elm.appendChild(copy);
-
     return elm;
 }
 
-async function rerender() {
-    // clear all elements from grand container
-    document.getElementsByClassName("grand-container")[0].textContent = "";
+function newSourceItem(type, title, value) {
+    let link = document.createElement("a");
+    link.innerHTML = "source";
+    link.href = value;
+    link.target = "_blank";
+
+    return newInfoItem(type, title, link.outerHTML);
+}
+
+function fillContainerWithData(container, dataSource) {
+    container.innerHTML = "";
 
     let copyElement = document.getElementById("copy-content");
-
-    // generate all column containers
-    let containers = [];
-
-    for (let i = 0; i < columns; i++) {
-        // create and add new element
-        let elm = document.createElement("div");
-        elm.classList.add("column-container");
-        document.getElementsByClassName("grand-container")[0].appendChild(elm);
-        containers.push(elm);
-    }
-
-    let containerIndex = 0;
 
     for (let i = 0; i < dataSource.length; i++) {
         // create and add new info box
@@ -93,7 +62,9 @@ async function rerender() {
         let dropdownElement = clonedElement.getElementsByClassName("dropdown")[0];
 
         // put title element in title div
-        titleElement.appendChild(newInfoItem("info-date", "📅", dataSource[i].date));
+        let titleElm = newInfoItem("info-date", "📅", dataSource[i].date);
+        titleElm.classList.add("bold");
+        titleElement.appendChild(titleElm);
         // rest in dropdown div
         dropdownElement.appendChild(newInfoItem("info-location", "🌎", dataSource[i].location));
         dropdownElement.appendChild(newInfoItem("info-club", "🏷️", dataSource[i].club));
@@ -111,14 +82,15 @@ async function rerender() {
             dropdownElement.appendChild(newSourceItem("info-source", "ℹ️", varsity_sources[dataSource[i].sources[j]]));
         }
         
-        containers[containerIndex].appendChild(clonedElement);
-
-        containerIndex++;
-        if (containerIndex >= columns) containerIndex = 0;
+        container.appendChild(clonedElement);
     }
+}
+
+function rerender() {
+    fillContainerWithData(document.getElementById("column-container-men"), varsity_data.men);
+    fillContainerWithData(document.getElementById("column-container-women"), varsity_data.women);
 
     for (let containers = document.getElementsByClassName("info-container"), l = containers.length, i = 0; i < l; i++) {
-        
         let container = containers[i];
 
         let dropdownTrigger = container.getElementsByClassName("info-date")[0];
@@ -130,31 +102,31 @@ async function rerender() {
             else
                 dropdownContent.classList.add("invisible");
         });
-
     }
 }
 
 function applyMobileChanges() {
     let change = 0;
+    if (portraitColumns == landscapeColumns) return;
     if (document.body.clientWidth > document.body.clientHeight) {
         // is landscape
-        if (columns == 2) change = 1;
+        if (columns == portraitColumns) change = 1;
 
-        columns = 5;
+        columns = landscapeColumns;
     } else {
-        if (columns == 5) change = 1;
+        if (columns == landscapeColumns) change = 1;
 
         // is portrait
-        columns = 2;
+        columns = portraitColumns;
     }
     if (change) rerender();
 }
 
 async function getSources() {
-    await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners.json")
+    await fetch(varsity_data_url)
         .then(data => data.json())
         .then(json => varsity_data = json);
-    await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners_sources.json")
+    await fetch(varsity_sources_url)
         .then(data => data.json())
         .then(json => varsity_sources = json);
 
@@ -190,20 +162,6 @@ function expandCollapseAll() {
     }
 
     document.getElementById("expand-button").innerHTML = collapseStatus;
-}
-
-function switchGender() {
-    let elm = document.getElementById("current-gender");
-    if (dataSource == varsity_data.men) {
-        dataSource = varsity_data.women;
-        elm.innerHTML = "now: damesch";
-    }
-    else {
-        dataSource = varsity_data.men;
-        elm.innerHTML = "now: mannen";
-    }
-
-    rerender();
 }
 
 document.addEventListener("DOMContentLoaded", main);
