@@ -8,10 +8,33 @@ let columns;
 
 let dataSource;
 
+let collapseStatus = "expand all";
+
 async function sleep(ms) {
     await new Promise((resolve, reject) => {
         setTimeout(resolve, ms);
     });
+}
+
+function newSourceItem(type, title, value) {
+    let elm = document.createElement("p");
+
+    elm.classList.add(type);
+    elm.classList.add("info-item");
+
+    let titleElm = document.createElement("span");
+    titleElm.innerHTML += title;
+    titleElm.classList.add("emoji");
+
+    elm.appendChild(titleElm);
+
+    let link = document.createElement("a");
+    link.innerHTML = "source";
+    link.href = value;
+
+    elm.appendChild(link);
+
+    return elm;
 }
 
 function newInfoItem(type, title, value) {
@@ -28,14 +51,14 @@ function newInfoItem(type, title, value) {
 
     elm.innerHTML += value;
 
-    let copy = document.createElement("span");
-    copy.classList.add("copy-button");
-    copy.title = "copy value";
-    copy.innerHTML += "❏";
+    // let copy = document.createElement("span");
+    // copy.classList.add("copy-button");
+    // copy.title = "copy value";
+    // copy.innerHTML += "📋";
 
-    copy.onclick = () => navigator.clipboard.writeText(value);
+    // copy.onclick = () => navigator.clipboard.writeText(value);
 
-    elm.appendChild(copy);
+    // elm.appendChild(copy);
 
     return elm;
 }
@@ -75,7 +98,7 @@ async function rerender() {
         dropdownElement.appendChild(newInfoItem("info-location", "🌎", dataSource[i].location));
         dropdownElement.appendChild(newInfoItem("info-club", "🏷️", dataSource[i].club));
         dropdownElement.appendChild(newInfoItem("info-time", "⏱️", dataSource[i].time));
-        dropdownElement.appendChild(newInfoItem("info-margin", "🥈", dataSource[i].alt_margin == "" ? dataSource[i].margin : dataSource[i].alt_margin));
+        dropdownElement.appendChild(newInfoItem("info-margin", "🥈", dataSource[i].alt_margin == "" ? (/^\d{2},\d{2}$/.test(dataSource[i].margin) ? dataSource[i].margin + "s" : dataSource[i].margin) : dataSource[i].alt_margin));
         for (let j = 0; j < dataSource[i].crew.length - 1; j++) {
             dropdownElement.appendChild(newInfoItem("info-crew", "👥", dataSource[i].crew[j].name));
         }
@@ -85,7 +108,7 @@ async function rerender() {
             dropdownElement.appendChild(newInfoItem("info-note", "📝", dataSource[i].notes[j]));
         }
         for (let j = 0; j < dataSource[i].sources.length; j++) {
-            dropdownElement.appendChild(newInfoItem("info-source", "ℹ️", varsity_sources[dataSource[i].sources[j]]));
+            dropdownElement.appendChild(newSourceItem("info-source", "ℹ️", varsity_sources[dataSource[i].sources[j]]));
         }
         
         containers[containerIndex].appendChild(clonedElement);
@@ -151,10 +174,22 @@ async function main() {
 
 function expandCollapseAll() {
     let elms = document.getElementsByClassName("dropdown");
-    for (let i = 0, l = elms.length; i < l; i++) {
-        if (elms[i].classList.contains("invisible")) elms[i].classList.remove("invisible");
-        else elms[i].classList.add("invisible");
+    
+    if (collapseStatus == "expand all") {
+        for (let i = 0, l = elms.length; i < l; i++) {
+            elms[i].classList.remove("invisible");
+        }
+
+        collapseStatus = "collapse all";
+    } else {
+        for (let i = 0, l = elms.length; i < l; i++) {
+            elms[i].classList.add("invisible");
+        }
+
+        collapseStatus = "expand all";
     }
+
+    document.getElementById("expand-button").innerHTML = collapseStatus;
 }
 
 function switchGender() {
