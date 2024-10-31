@@ -102,8 +102,8 @@ async function rerender() {
         for (let j = 0; j < dataSource[i].crew.length - 1; j++) {
             dropdownElement.appendChild(newInfoItem("info-crew", "👥", dataSource[i].crew[j].name));
         }
-        // cox
-        dropdownElement.appendChild(newInfoItem("info-crew", "🗣️", dataSource[i].crew[dataSource[i].crew.length-1].name));
+        // cox or stroke, depending on if it's the men's race (coxed four) or women's race (coxless four)
+        dropdownElement.appendChild(newInfoItem("info-crew", dataSource == varsity_data.men ? "🗣️" : "👥", dataSource[i].crew[dataSource[i].crew.length-1].name));
         for (let j = 0; j < dataSource[i].notes.length; j++) {
             dropdownElement.appendChild(newInfoItem("info-note", "📝", dataSource[i].notes[j]));
         }
