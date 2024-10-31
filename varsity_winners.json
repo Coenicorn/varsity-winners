@@ -25,7 +25,7 @@
             "alt_margin": "",
             "margin": "03,66",
             "notes": [
-                "Skøll ligt het grootste deel van deze race vooraan op dominante voorsprong, tot een grote snoek in het laatste deel van de race. Skøll had nog nooit een Varsity gewonnen."
+                "Skøll wint bijna zijn eerste Varsity"
             ],
             "sources": [
                 0
@@ -404,16 +404,17 @@
                 }
             ],
             "club": "Skadi",
-            "time": "00:00,00",
+            "time": "09:46,86",
             "alt_margin": "",
-            "margin": "00,00",
+            "margin": "02,65",
             "notes": [
-                "Tijden niet gevonden"
+                "'Na 5 keer niet meer leuk, hadden er nog best 3-4 meer kunnen worden' - Olaf van Andel"
             ],
             "sources": [
                 13,
                 14,
-                15
+                15,
+                36
             ]
         },
         {
@@ -1958,7 +1959,7 @@
             "location": "Amsterdam-Rijnkanaal (Jutphaas)",
             "club": "Nereus",
             "time": "10:59,80",
-            "alt_margin": "2 1/2",
+            "alt_margin": "2 1/2 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -1988,7 +1989,7 @@
             "location": "Amsterdam-Rijnkanaal (Jutphaas)",
             "club": "Laga",
             "time": "11:42,50",
-            "alt_margin": "1 1/2",
+            "alt_margin": "1 1/2 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -2108,7 +2109,7 @@
             "location": "Amsterdam-Rijnkanaal (Jutphaas)",
             "club": "Nereus",
             "time": "10:45,00",
-            "alt_margin": "2 1/2",
+            "alt_margin": "2 1/2 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -2138,7 +2139,7 @@
             "location": "Amsterdam-Rijnkanaal (Jutphaas)",
             "club": "Nereus",
             "time": "10:54,00",
-            "alt_margin": "2 1/2",
+            "alt_margin": "2 1/2 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -2378,7 +2379,7 @@
             "location": "Boschbaan",
             "club": "Laga",
             "time": "07:23,80",
-            "alt_margin": "2 1/2",
+            "alt_margin": "2 1/2 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -2498,7 +2499,7 @@
             "location": "Noordzeekanaal",
             "club": "Nereus",
             "time": "11:13,20",
-            "alt_margin": "1 1/3",
+            "alt_margin": "1 1/3 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -2588,7 +2589,7 @@
             "location": "Noordzeekanaal",
             "club": "Nereus",
             "time": "10:36,00",
-            "alt_margin": "1 1/2",
+            "alt_margin": "1 1/2 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -2817,7 +2818,9 @@
                     "name": "C.J.A. van Lummel"
                 }
             ],
-            "notes": [],
+            "notes": [
+                "Winstmarge onbekend"
+            ],
             "sources": [
                 24,
                 27
@@ -2888,7 +2891,7 @@
             "location": "Noordzeekanaal",
             "club": "Laga",
             "time": "11:37,60",
-            "alt_margin": "1 3/4",
+            "alt_margin": "1 3/4 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -2948,7 +2951,7 @@
             "location": "Noordzeekanaal",
             "club": "Laga",
             "time": "11:22,00",
-            "alt_margin": "1 1/2",
+            "alt_margin": "1 1/2 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -2978,7 +2981,7 @@
             "location": "Noordzeekanaal",
             "club": "Nereus",
             "time": "11:40,00",
-            "alt_margin": "1 1/4",
+            "alt_margin": "1 1/4 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -3038,7 +3041,7 @@
             "location": "Noordzeekanaal",
             "club": "Laga",
             "time": "14:39,00",
-            "alt_margin": "2 1/2",
+            "alt_margin": "2 1/2 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -3128,7 +3131,7 @@
             "location": "De Schie",
             "club": "Laga",
             "time": "11:31,00",
-            "alt_margin": "4",
+            "alt_margin": "4 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -3158,7 +3161,7 @@
             "location": "De Schie",
             "club": "Laga",
             "time": "12:05,60",
-            "alt_margin": "5",
+            "alt_margin": "5 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -3218,7 +3221,7 @@
             "location": "De Schie",
             "club": "Triton",
             "time": "12:32,00",
-            "alt_margin": "5",
+            "alt_margin": "5 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -3249,7 +3252,7 @@
             "club": "Nereus",
             "time": "12:21,00",
             "alt_margin": "",
-            "margin": "14,8",
+            "margin": "14,80",
             "crew": [
                 {
                     "name": "G.A. Sedee"
@@ -3308,7 +3311,7 @@
             "location": "De Schie",
             "club": "Njord",
             "time": "12:05,00",
-            "alt_margin": "4",
+            "alt_margin": "4 lengten",
             "margin": "00,00",
             "crew": [
                 {
@@ -3338,7 +3341,7 @@
             "location": "De Schie",
             "club": "Laga",
             "time": "12:18,00",
-            "alt_margin": "1",
+            "alt_margin": "1 1/4 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -3368,8 +3371,8 @@
             "location": "De Schie",
             "club": "Njord",
             "time": "12:16,00",
-            "alt_margin": "16",
-            "margin": "00,00",
+            "alt_margin": "",
+            "margin": "16,00",
             "crew": [
                 {
                     "name": "C.Ch. van Helsdingen"
@@ -3417,7 +3420,9 @@
                     "name": "K.J. Bijl"
                 }
             ],
-            "notes": [],
+            "notes": [
+                "Winstmarge onbekend"
+            ],
             "sources": [
                 24,
                 27
@@ -3458,7 +3463,7 @@
             "location": "De Schie",
             "club": "Laga",
             "time": "11:00,00",
-            "alt_margin": "1/2",
+            "alt_margin": "1/2 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -3500,7 +3505,7 @@
             "location": "De Schie",
             "club": "Laga",
             "time": "11:02,50",
-            "alt_margin": "1",
+            "alt_margin": "1 lengte",
             "margin": "00,00",
             "crew": [
                 {
@@ -3852,7 +3857,9 @@
                     "name": "R.J.Th. Meurer"
                 }
             ],
-            "notes": [],
+            "notes": [
+                "Winstmarge onbekend"
+            ],
             "sources": [
                 24,
                 27
@@ -4104,7 +4111,7 @@
             "club": "Njord",
             "time": "00:00,00",
             "alt_margin": "--",
-            "margin": "00,00",
+            "margin": "37,00",
             "crew": [
                 {
                     "name": "J.B.A. Vreede"
@@ -4122,7 +4129,9 @@
                     "name": "A.A. Humme"
                 }
             ],
-            "notes": [],
+            "notes": [
+                "Finishtijd onbekend"
+            ],
             "sources": [
                 24,
                 27
@@ -4182,7 +4191,9 @@
                     "name": "A.G.A. van Eelde"
                 }
             ],
-            "notes": [],
+            "notes": [
+                "Finishtijd onbekend"
+            ],
             "sources": [
                 24,
                 27
