@@ -1,6 +1,6 @@
 let varsity_data, varsity_sources;
-const varsity_data_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners.json";
-const varsity_sources_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/64ac2e48f830ceb40d321ca3445a0068fb3ee40c/varsity_winners_sources.json";
+const varsity_data_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners.json";
+const varsity_sources_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners_sources.json";
 
 function changeTextContent(elm, str) {
     elm.innerHTML = elm.innerHTML.replace("placeholder", str);
