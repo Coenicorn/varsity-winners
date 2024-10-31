@@ -61,11 +61,11 @@ async function fillContainerWithData(container, dataSource) {
         let titleElement = clonedElement.getElementsByClassName("info-dropdown-title")[0];
         let dropdownElement = clonedElement.getElementsByClassName("dropdown")[0];
 
+        titleElement.getElementsByClassName("title-text-number")[0].innerHTML = dataSource.length - i;
+        titleElement.getElementsByClassName("title-text-year")[0].innerHTML = dataSource[i].date.split("-")[2];
+
         // put title element in title div
-        let titleElm = newInfoItem("info-date", "", dataSource[i].date);
-        titleElm.classList.add("bold");
-        titleElement.appendChild(titleElm);
-        // rest in dropdown div
+        dropdownElement.appendChild(newInfoItem("info-date", "🗓️", dataSource[i].date));
         dropdownElement.appendChild(newInfoItem("info-location", "🌎", dataSource[i].location));
         dropdownElement.appendChild(newInfoItem("info-club", "🥇", dataSource[i].club));
         dropdownElement.appendChild(newInfoItem("info-time", "⏱️", dataSource[i].time));
@@ -93,7 +93,7 @@ function rerender() {
     for (let containers = document.getElementsByClassName("info-container"), l = containers.length, i = 0; i < l; i++) {
         let container = containers[i];
 
-        let dropdownTrigger = container.getElementsByClassName("info-date")[0];
+        let dropdownTrigger = container.getElementsByClassName("info-dropdown-title")[0];
         let dropdownContent = container.getElementsByClassName("dropdown")[0];
 
         dropdownTrigger.addEventListener("click", () => {

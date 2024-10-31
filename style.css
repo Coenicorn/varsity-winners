@@ -70,7 +70,7 @@ h1, h2 {
     max-width: 25em;
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 2px;
     text-align: center;
 }
 
@@ -91,40 +91,43 @@ h1, h2 {
 }
 
 .info-item {
-    padding: 5px;
+    padding: 6px;
     text-align: center;
     margin: 0;
 }
 
-span {
+.emoji {
     float: left;
 }
 
-.copy-button {
+.left {
+    float: left;
+}
+
+.right {
     float: right;
-    padding-left: .5em;
-    padding-right: .5em;
-    cursor: pointer;
-    scale: .8;
 }
 
-.copy-button:hover {
-    background-color: rgba(255, 255, 255, 0.651);
-}
+.info-dropdown-title {
+    display: flex;
+    justify-content: space-between;
 
-.info-date {
     background-color: #f7b801;
 
     /* dropdown */
     cursor: pointer;
 }
 
-.info-date:hover {
+.info-dropdown-title:hover {
     background-color: #ffc726;
 }
 
 .dropdown {
     position: relative;
+}
+
+.info-date {
+    background-color: #FFEFA0;
 }
 
 .info-location {
