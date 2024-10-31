@@ -15,26 +15,41 @@ body {
 }
 
 .header {
-    padding: 1%;
     background-color: #2595eb;
 
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    flex: 1;
     text-align: center;
+    padding: 10px;
+}
+
+.expand-button {
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.burger-menu {
+    float: left;
+    position: relative;
+    width: auto;
+
+    padding: 20px;
+    border-right: 1px solid black;
 }
 
 .util-functions {
     padding: .5vw;
 }
 
-button {
-    margin: 2px;
-    font-weight: 600;
-}
-
 .bold {
     font-weight: 600;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
 }
 
@@ -133,9 +148,20 @@ span {
 }
 
 .info-note {
-    background-color: #FFEFA0;
+    background-color: #a3ffa0;
 }
 
 .info-source {
-    background-color: #FFD57E;
+    background-color: #FFEFA0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2595eb;
+    padding: 10px;
+}
+
+.footer p {
+    margin: 0;
 }

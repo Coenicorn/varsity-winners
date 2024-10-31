@@ -46,7 +46,7 @@ function newSourceItem(type, title, value) {
     return newInfoItem(type, title, link.outerHTML);
 }
 
-function fillContainerWithData(container, dataSource) {
+async function fillContainerWithData(container, dataSource) {
     container.innerHTML = "";
 
     let copyElement = document.getElementById("copy-content");
@@ -62,7 +62,7 @@ function fillContainerWithData(container, dataSource) {
         let dropdownElement = clonedElement.getElementsByClassName("dropdown")[0];
 
         // put title element in title div
-        let titleElm = newInfoItem("info-date", "📅", dataSource[i].date);
+        let titleElm = newInfoItem("info-date", "", dataSource[i].date);
         titleElm.classList.add("bold");
         titleElement.appendChild(titleElm);
         // rest in dropdown div
@@ -144,24 +144,24 @@ async function main() {
     setInterval(applyMobileChanges, 500);
 }
 
-function expandCollapseAll() {
-    let elms = document.getElementsByClassName("dropdown");
+function expandCollapseAll(container) {
+    let elms = container.getElementsByClassName("dropdown");
     
-    if (collapseStatus == "expand all") {
+    if (!container.classList.contains("collapsed")) {
         for (let i = 0, l = elms.length; i < l; i++) {
             elms[i].classList.remove("invisible");
         }
 
-        collapseStatus = "collapse all";
+        container.classList.add("collapsed");
     } else {
         for (let i = 0, l = elms.length; i < l; i++) {
             elms[i].classList.add("invisible");
         }
 
-        collapseStatus = "expand all";
+        container.classList.remove("collapsed");
     }
 
-    document.getElementById("expand-button").innerHTML = collapseStatus;
+    container.getElementsByClassName("expand-button")[0].innerHTML = container.classList.contains("collapsed") ? "collapse all" : "expand all";
 }
 
 document.addEventListener("DOMContentLoaded", main);
