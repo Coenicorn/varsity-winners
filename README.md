@@ -127,8 +127,10 @@ crew
     bow,
     ...,
     stroke,
-    cox
+    cox*
 ]
 ```
 
-<b>Some earlier races had 8 rowers +cox instead of the modern 4 +cox, so any program using this dataset will have to handle this exception</b>
+Some earlier races had 8 rowers +cox instead of the modern 4 +cox, so any program using this dataset will have to handle this exception
+
+*The women's Varsity is raced in coxless fours, so when accessing the data for the women's races, there is no cox in the crew array. This has to be handled dynamically
