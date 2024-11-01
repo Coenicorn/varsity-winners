@@ -42,6 +42,50 @@ De dataset bestaat uit 2 bestanden: varsity_winners.json en varsity_winners_sour
 
 Hieronder volgt een gedetailleerde beschrijving van het JSON-schema voor het bestand `varsity_winners.json`.
 
+```javascript
+{
+    men: [
+        {
+            date: String,
+            location: String,
+            club: String,
+            time: String,
+            margin: String,
+            alt_margin: String,
+            notes: String,
+            sources: [Number]
+            crew: [
+                {
+                    name: String
+                },
+                ...
+            ]
+        },
+        ...
+    ],
+    women: [
+        {
+            date: String,
+            location: String,
+            club: String,
+            time: String,
+            margin: String,
+            alt_margin: String,
+            notes: String,
+            sources: [Number]
+            crew: [
+                {
+                    name: String
+                },
+                ...
+            ]
+        },
+        ...
+    ],
+    version: String
+}
+```
+
 `men` - Een array van objecten met gegevens over de herenraces
 <br>
 `women` - Een array van objecten met gegevens over de vrouwenraces
@@ -72,6 +116,14 @@ Dit verschil is mogelijk niet geregistreerd / moeilijk te vinden voor oudere rac
 
 De positie van de roeier in de boot is gekoppeld aan zijn index in de `crew` array, die als volgt wordt gevuld:
 <br>
+```javascript
+[
+    boeg,
+    ...
+    slag,
+    stuur
+]
+```
 
 Sommige eerdere races hadden 8 roeiers + stuurman in plaats van de moderne 4 + stuurman, dus elk programma dat deze dataset gebruikt zal met deze uitzondering moeten omgaan.
 
