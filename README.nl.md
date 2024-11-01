@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Coenicorn/varsity-winners/master/varsity.png" />
+</p>
+
 # Varsity Winnaars
 
 De [Varsity](https://knsrb.nl/varsity/) is een historisch Nederlands roei-evenement waarbij de beste studentenploegen uit het hele land strijden om de 'Oude Vier' (de top heren [gestuurde vier](https://nl.wikipedia.org/wiki/Gestuurde_vier)).
