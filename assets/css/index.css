@@ -1,0 +1,26 @@
+main {
+
+}
+
+#to-the-list {
+    width: fit-content;
+    padding: 5px;
+
+    background-color: rgb(31, 143, 31);
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+#to-the-list h1 {
+    background-color: rgb(255, 239, 239);
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#to-the-list img {
+    height: 10vh;
+}

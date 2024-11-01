@@ -22,43 +22,47 @@
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/shared.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Varsity Winners</h1>
-    </div>
+    <header id="header-content">
+        <div id="burger">
+            <img draggable="false" src="assets/burger.svg" id="burger-img" class="img-button" alt="menu" onclick="toggleSidebar();">
+        </div>
 
-    <div class="invisible" id="copy-content">
-        <div class="info-dropdown-title info-item"><span class="left bold title-text-number">#0</span><span class="right bold title-text-year">0000</span></div>
-        <div class="dropdown invisible">
+        <h2><a href="/index.html" class="silent-link">Varsity Winners</a></h2>
+
+        <h3 onclick="window.location.href = '/contribute.html'" id="contribute">contribute</h3>
+    </header>
+
+    <div class="hidden" id="sidebar-wrapper">
+        <div id="sidebar">
+            <div id="close-menu-wrapper">
+                <img draggable="false" src="assets/cross.svg" alt="close-menu" id="close-menu-img" class="img-button" onclick="toggleSidebar();">
+            </div>
         </div>
     </div>
 
-    <div class="grand-container">
-        <div class="data-container-wrapper" id="wrapper-men">
-            <h1>men</h1>
-            <button class="expand-button" id="expand-button-men" onclick="expandCollapseAll(document.getElementById('wrapper-men'))">expand all</button>
-
-            <div class="column-container" id="column-container-men"></div>
+    <main>
+        <div id="to-the-list">
+            <h1>To the list</h1>
+            <img src="assets/arrow-right.svg" alt="arrow-right">
         </div>
-        <div class="data-container-wrapper" id="wrapper-women">
-            <h1>women</h1>
-            <button class="expand-button" id="expand-button-women" onclick="expandCollapseAll(document.getElementById('wrapper-women'))">expand all</button>
-            <div class="column-container" id="column-container-women"></div>
-        </div>
-    </div>
+    </main>
 
-    <div class="footer">
-        <p><a href="https://github.com/coenicorn/varsity-winners">source</a></p>
+    <footer>
         <p>© Coen Bleumers 2024</p>
-        <p><a href="mailto:coenicorn.blauwzee@gmail.com">contact</a></p>
-    </div>
+    </footer>
 
     <script>
-        /* https://www.toptal.com/developers/javascript-minifier */
-        let varsity_data,varsity_sources;const varsity_data_url="https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners.json",varsity_sources_url="https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners_sources.json";function changeTextContent(e,n){e.innerHTML=e.innerHTML.replace("placeholder",n)}const portraitColumns=1,landscapeColumns=1;let columns=1,collapseStatus="expand all";async function sleep(e){await new Promise((n,t)=>{setTimeout(n,e)})}function newInfoItem(e,n,t){let s=document.createElement("p");s.classList.add(e),s.classList.add("info-item");let a=document.createElement("span");return a.innerHTML+=n,a.classList.add("emoji"),s.appendChild(a),s.innerHTML+=t,s}function newSourceItem(e,n,t){let s=document.createElement("a");return s.innerHTML="source",s.href=t,s.target="_blank",newInfoItem(e,n,s.outerHTML)}async function fillContainerWithData(e,n){e.innerHTML="";let t=document.getElementById("copy-content");for(let s=0;s<n.length;s++){let a=t.cloneNode(!0);a.id=n[s].date,a.classList.remove("invisible"),a.classList.add("info-container");let i=a.getElementsByClassName("info-dropdown-title")[0],l=a.getElementsByClassName("dropdown")[0];i.getElementsByClassName("title-text-number")[0].innerHTML=n.length-s,i.getElementsByClassName("title-text-year")[0].innerHTML=n[s].date.split("-")[2],l.appendChild(newInfoItem("info-date","\uD83D\uDDD3️",n[s].date)),l.appendChild(newInfoItem("info-location","\uD83C\uDF0E",n[s].location)),l.appendChild(newInfoItem("info-club","\uD83E\uDD47",n[s].club)),l.appendChild(newInfoItem("info-time","⏱️",n[s].time)),l.appendChild(newInfoItem("info-margin","\uD83E\uDD48","+"+(""==n[s].alt_margin?n[s].margin:n[s].alt_margin)));for(let o=0;o<n[s].crew.length-1;o++)l.appendChild(newInfoItem("info-crew","\uD83D\uDC65",n[s].crew[o].name));l.appendChild(newInfoItem("info-crew",n==varsity_data.men?"\uD83D\uDDE3️":"\uD83D\uDC65",n[s].crew[n[s].crew.length-1].name));for(let r=0;r<n[s].notes.length;r++)l.appendChild(newInfoItem("info-note","\uD83D\uDCDD",n[s].notes[r]));for(let c=0;c<n[s].sources.length;c++)l.appendChild(newSourceItem("info-source","ℹ️",varsity_sources[n[s].sources[c]]));e.appendChild(a)}}function rerender(){fillContainerWithData(document.getElementById("column-container-men"),varsity_data.men),fillContainerWithData(document.getElementById("column-container-women"),varsity_data.women);for(let e=document.getElementsByClassName("info-container"),n=e.length,t=0;t<n;t++){let s=e[t],a=s.getElementsByClassName("info-dropdown-title")[0],i=s.getElementsByClassName("dropdown")[0];a.addEventListener("click",()=>{i.classList.contains("invisible")?i.classList.remove("invisible"):i.classList.add("invisible")})}}function applyMobileChanges(){}async function getSources(){await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners.json").then(e=>e.json()).then(e=>varsity_data=e),await fetch("https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners_sources.json").then(e=>e.json()).then(e=>varsity_sources=e),dataSource=varsity_data.men}async function main(){await getSources(),applyMobileChanges(),rerender(),setInterval(applyMobileChanges,500)}function expandCollapseAll(e){let n=e.getElementsByClassName("dropdown");if(e.classList.contains("collapsed")){for(let t=0,s=n.length;t<s;t++)n[t].classList.add("invisible");e.classList.remove("collapsed")}else{for(let a=0,i=n.length;a<i;a++)n[a].classList.remove("invisible");e.classList.add("collapsed")}e.getElementsByClassName("expand-button")[0].innerHTML=e.classList.contains("collapsed")?"collapse all":"expand all"}document.addEventListener("DOMContentLoaded",main);
+        function toggleSidebar() {
+            if (document.getElementById("sidebar-wrapper").classList.contains("hidden")) {
+                document.getElementById("sidebar-wrapper").classList.remove("hidden");
+            } else {
+                document.getElementById("sidebar-wrapper").classList.add("hidden");
+            }
+        }
     </script>
-    <!-- <script src="index.js"></script> -->
 </body>
 </html>
