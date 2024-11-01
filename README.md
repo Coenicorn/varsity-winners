@@ -2,6 +2,8 @@
   <img src="https://raw.githubusercontent.com/Coenicorn/varsity-winners/master/varsity.png" />
 </p>
 
+[![nl](https://img.shields.io/badge/any_text-you_like-blue)](https://github.com/Coenicorn/varsity-winners/blob/master/README.nl.md)
+
 # Varsity Winners
 
 The [Varsity](https://knsrb.nl/varsity/) is a historic Dutch rowing event during which the top college crews from all over the country compete to win the 'Oude Vier' (the top men's [coxed four](https://en.wikipedia.org/wiki/Coxed_four)).
