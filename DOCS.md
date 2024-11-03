@@ -21,7 +21,7 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
 
 ```javascript
 {
-    races: [
+    events: [
         {
             event_name: String,
             event_id: String,
@@ -52,7 +52,7 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
 ```
 
 
-`races` - An array storing data for each event
+`events` - An array storing data for each event
 <br>
 `version` - A string storing the current version
 
