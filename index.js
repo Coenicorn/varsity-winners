@@ -87,8 +87,8 @@ async function fillContainerWithData(container, dataSource) {
 }
 
 function rerender() {
-    fillContainerWithData(document.getElementById("column-container-men"), varsity_data.men);
-    fillContainerWithData(document.getElementById("column-container-women"), varsity_data.women);
+    fillContainerWithData(document.getElementById("column-container-men"), varsity_data.races[0].data);
+    fillContainerWithData(document.getElementById("column-container-women"), varsity_data.races[1].data);
 
     for (let containers = document.getElementsByClassName("info-container"), l = containers.length, i = 0; i < l; i++) {
         let container = containers[i];
