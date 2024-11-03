@@ -1,4 +1,5 @@
 [![nl](https://img.shields.io/badge/lang-nl-blue)](https://github.com/Coenicorn/varsity-winners/blob/master/README.nl.md)
+[![en](https://img.shields.io/badge/docs-en-red)](https://github.com/Coenicorn/varsity-winners/blob/master/DOCS.md)
 
 # Varsity Winners
 
@@ -36,99 +37,6 @@ Important points of improvement:
 
 * Most of the names in this document are abbreviated, because the main source I used for the majority of the names does so. If you know any of the names, please change them to the non-abbreviated versions and submit a pull request!
 
-## Files
+## Documentation
 
-The dataset consists of 2 files: varsity_winners.json and varsity_winners_sources.json. The first file stores the data for each race and the second stores the sources used for the first. These sources are links to data sources all across the web. A detailed description of the json schema can be found below.
-
-## Schema
-
-Below is a detailed description of the JSON schema for the `varsity_winners.json` file.
-
-```javascript
-{
-    men: [
-        {
-            date: String,
-            location: String,
-            club: String,
-            time: String,
-            margin: String,
-            alt_margin: String,
-            notes: String,
-            sources: [Number]
-            crew: [
-                {
-                    name: String
-                },
-                ...
-            ]
-        },
-        ...
-    ],
-    women: [
-        {
-            date: String,
-            location: String,
-            club: String,
-            time: String,
-            margin: String,
-            alt_margin: String,
-            notes: String,
-            sources: [Number]
-            crew: [
-                {
-                    name: String
-                },
-                ...
-            ]
-        },
-        ...
-    ],
-    version: String
-}
-```
-
-
-`men` - An array of objects containing race data for the men's races
-<br>
-`women` - An array of objects containing race data for the women's races
-<br>
-`version` - A string to store the current version
-The data stored for each race is ordered so that the latest varsity is always at `data.men[0]` and `data.women[0]` respectively
-
-`date` - The date of the event, formatted as such: "DD-MM-YY"
-<br>
-`location` - The location of the event. 
-<br>
-`crew` - An array of object containing crew data for each crew member.
-<br>
-`club` - The name of the winning club.
-<br>
-`time` - The total time that the winner has taken to finish the race, formatted as such: "00:00,00" (minutes, seconds, hundredths)
-<br>
-`margin` - The total time that the winner was faster than the runner-up, formatted as such: "00,00" (seconds, hundredths).
-This difference may not have been recorded / be difficult to find for older races so in that case the difference is "00,00"
-<br>
-`alt_margin` - The alternative margin string if the margin (historically) is not numerical. Some older editions store the margins in 'lengths' and such terms. <b>This field is empty (`""`) by default, so if it is NOT, then the alternative margin MUST be used.</b>
-<br>
-`notes` - An array with notes for each race. Can contain trivia facts or important information about how a race transpired.
-<br>
-`sources` - List of indeces into sources array found in `varsity_winners_sources.json`
-
-`name` - The name of the crew member
-
-The position of the rower in the boat is tied to his index in the `crew` array, which is populated as such:
-<br>
-```
-crew
-[
-    bow,
-    ...,
-    stroke,
-    cox*
-]
-```
-
-Some earlier races had 8 rowers +cox instead of the modern 4 +cox, so any program using this dataset will have to handle this exception
-
-*The women's Varsity is raced in coxless fours, so when accessing the data for the women's races, there is no cox in the crew array. This has to be handled dynamically
+Find the documentation [here](https://github.com/Coenicorn/varsity-winners/blob/master/DOCS.md)
