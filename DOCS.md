@@ -64,7 +64,7 @@ Below is a detailed description of the JSON schema for the `varsity_winners.json
 
 The data array is ordered as such that the first element (`data[0]`) is always the latest. As of version `1.0.0`, there are only 2 events registered; the men's coxed fours and the women's fours. These events are ordered in the array as such:
 
-```json
+```javascript
 races
 [
     men,
@@ -95,7 +95,7 @@ This difference may not have been recorded / be difficult to find for older race
 
 The position of the rower in the boat is tied to his index in the `crew` array, which is populated as such:
 <br>
-```
+```javascript
 crew
 [
     bow,
