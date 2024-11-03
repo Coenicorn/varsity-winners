@@ -25,35 +25,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Varsity Winners</h1>
-    </div>
-
-    <div class="invisible" id="copy-content">
-        <div class="info-dropdown-title info-item"><span class="left bold title-text-number">#0</span><span class="right bold title-text-year">0000</span></div>
-        <div class="dropdown invisible">
+    <main>
+        <div class="header">
+            <h1>Varsity Winners</h1>
         </div>
-    </div>
 
-    <div class="grand-container">
-        <div class="data-container-wrapper" id="wrapper-men">
-            <h1>men</h1>
-            <button class="expand-button" id="expand-button-men" onclick="expandCollapseAll(document.getElementById('wrapper-men'))">expand all</button>
-
-            <div class="column-container" id="column-container-men"></div>
+        <div class="invisible" id="copy-content">
+            <div class="info-dropdown-title info-item"><span class="left bold title-text-number">#0</span><span class="right bold title-text-year">0000</span></div>
+            <div class="dropdown invisible">
+            </div>
         </div>
-        <div class="data-container-wrapper" id="wrapper-women">
-            <h1>women</h1>
-            <button class="expand-button" id="expand-button-women" onclick="expandCollapseAll(document.getElementById('wrapper-women'))">expand all</button>
-            <div class="column-container" id="column-container-women"></div>
-        </div>
-    </div>
 
-    <div class="footer">
+        <div class="grand-container">
+            <div class="data-container-wrapper" id="wrapper-men">
+                <h1>men</h1>
+                <button class="expand-button" id="expand-button-men" onclick="expandCollapseAll(document.getElementById('wrapper-men'))">expand all</button>
+
+                <div class="column-container" id="column-container-men"></div>
+            </div>
+            <div class="data-container-wrapper" id="wrapper-women">
+                <h1>women</h1>
+                <button class="expand-button" id="expand-button-women" onclick="expandCollapseAll(document.getElementById('wrapper-women'))">expand all</button>
+                <div class="column-container" id="column-container-women"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
         <p><a href="https://github.com/coenicorn/varsity-winners">source</a></p>
         <p>© Coen Bleumers 2024</p>
         <p><a href="mailto:coenicorn.blauwzee@gmail.com">contact</a></p>
-    </div>
+    </footer>
 
     <script>
         /* https://www.toptal.com/developers/javascript-minifier */

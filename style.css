@@ -12,6 +12,14 @@ body {
     color: black;
 
     font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    flex: 1;
 }
 
 .header {
@@ -158,13 +166,13 @@ h1, h2 {
     background-color: #FFEFA0;
 }
 
-.footer {
+footer {
     display: flex;
     justify-content: space-between;
     background-color: #2595eb;
     padding: 10px;
 }
 
-.footer p {
+footer p {
     margin: 0;
 }
