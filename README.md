@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Coenicorn/varsity-winners/master/varsity.png" />
-</p>
-
 [![nl](https://img.shields.io/badge/lang-nl-blue)](https://github.com/Coenicorn/varsity-winners/blob/master/README.nl.md)
 
 # Varsity Winners
