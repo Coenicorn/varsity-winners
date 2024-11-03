@@ -4,7 +4,7 @@ The dataset consists of 2 files: varsity_winners.json and varsity_winners_source
 
 ## `varsity_winners_sources.json`
 
-The sources file is layed out very simply, storing only 1 array with each index a different source:
+The sources file has a very simple layout, storing only 1 array with each index a different source:
 
 ```javascript
 [
