@@ -27,27 +27,34 @@
 </head>
 <body>
     <header id="header-content">
-        <div id="burger">
-            <img draggable="false" src="assets/burger.svg" id="burger-img" class="img-button" alt="menu" onclick="toggleSidebar();">
-        </div>
+        <h3 onclick="window.location.href=`https:\/\/github.com/Coenicorn/varsity-winners`" class="big-button" id="source">Bekijk de bron</h3>
 
-        <h2><a href="/index.html" class="silent-link">Varsity Winners</a></h2>
+        <h2><a href="/index.html" class="silent-link">Varsity Winnaars</a></h2>
 
-        <h3 onclick="window.location.href = '/contribute.html'" id="contribute">contribute</h3>
+        <h3 onclick="window.location.href = '/contribute.html'" id="contribute" class="big-button">Help ons verbeteren!</h3>
     </header>
 
-    <div class="hidden" id="sidebar-wrapper">
-        <div id="sidebar">
-            <div id="close-menu-wrapper">
-                <img draggable="false" src="assets/cross.svg" alt="close-menu" id="close-menu-img" class="img-button" onclick="toggleSidebar();">
+    <main>
+        <div id="event-selector" class="hidden">
+            <div class="event-link soft-shadow" id="select-men" onclick="selectEvent(0)">
+                <img draggable="false" src="assets/varsity.png" alt="varsity-logo" class="selector-img">
+                <p class="event-name soft-shadow">Oude Heren Vier</p>
+                <p class="event-details">#</p>
+            </div>
+            <div draggable="false" class="event-link soft-shadow" id="select-women" onclick="selectEvent(1)">
+                <img src="assets/varsity.png" alt="varsity-logo" class="selector-img">
+                <p class="event-name">Oude Damesch Vier</p>
+                <p class="event-details">#</p>
             </div>
         </div>
-    </div>
-
-    <main>
-        <div id="to-the-list">
-            <h1>To the list</h1>
-            <img src="assets/arrow-right.svg" alt="arrow-right">
+        <div id="race-selector-wrapper" class="hidden">
+            <p id="back-to-selection" onclick="setSelectionState('event')">< back</p>
+            <div id="race-selector">
+            </div>
+        </div>
+        <div id="race-information-wrapper">
+            <p id="back-to-selection" onclick="setSelectionState('race')">< back</p>
+            
         </div>
     </main>
 
@@ -55,14 +62,6 @@
         <p>© Coen Bleumers 2024</p>
     </footer>
 
-    <script>
-        function toggleSidebar() {
-            if (document.getElementById("sidebar-wrapper").classList.contains("hidden")) {
-                document.getElementById("sidebar-wrapper").classList.remove("hidden");
-            } else {
-                document.getElementById("sidebar-wrapper").classList.add("hidden");
-            }
-        }
-    </script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

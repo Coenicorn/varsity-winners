@@ -1,125 +1,42 @@
 let varsity_data, varsity_sources;
-const varsity_data_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners.json";
-const varsity_sources_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/heads/master/varsity_winners_sources.json";
+const varsity_data_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/tags/v1.0.0/varsity_winners.json";
+const varsity_sources_url = "https://raw.githubusercontent.com/Coenicorn/varsity-winners/refs/tags/v1.0.0/varsity_winners_sources.json";
 
-function changeTextContent(elm, str) {
-    elm.innerHTML = elm.innerHTML.replace("placeholder", str);
+function elm(id) {
+    return document.getElementById(id);
 }
 
-const portraitColumns = 1;
-const landscapeColumns = 1;
+/* sets selection state and hides/reveals relevant elements*/
+function setSelectionState(state) {
 
-let columns = portraitColumns;
+    const
+        eventSelection = elm("event-selector"),
+        raceSelection = elm("race-selector-wrapper"),
+        raceInformation = elm("race-information-wrapper");
 
-let collapseStatus = "expand all";
+    eventSelection.classList.add("hidden");
+    raceSelection.classList.add("hidden");
+    raceInformation.classList.add("hidden");
 
-async function sleep(ms) {
-    await new Promise((resolve, reject) => {
-        setTimeout(resolve, ms);
-    });
-}
-
-
-function newInfoItem(type, title, value) {
-    let elm = document.createElement("p");
-
-    elm.classList.add(type);
-    elm.classList.add("info-item");
-
-    let titleElm = document.createElement("span");
-    titleElm.innerHTML += title;
-    titleElm.classList.add("emoji");
-
-    elm.appendChild(titleElm);
-
-    elm.innerHTML += value;
-
-    return elm;
-}
-
-function newSourceItem(type, title, value) {
-    let link = document.createElement("a");
-    link.innerHTML = "source";
-    link.href = value;
-    link.target = "_blank";
-
-    return newInfoItem(type, title, link.outerHTML);
-}
-
-async function fillContainerWithData(container, dataSource) {
-    container.innerHTML = "";
-
-    let copyElement = document.getElementById("copy-content");
-
-    for (let i = 0; i < dataSource.length; i++) {
-        // create and add new info box
-        let clonedElement = copyElement.cloneNode(true);
-        clonedElement.id = dataSource[i].date;
-        clonedElement.classList.remove("invisible");
-        clonedElement.classList.add("info-container");
-
-        let titleElement = clonedElement.getElementsByClassName("info-dropdown-title")[0];
-        let dropdownElement = clonedElement.getElementsByClassName("dropdown")[0];
-
-        titleElement.getElementsByClassName("title-text-number")[0].innerHTML = dataSource.length - i;
-        titleElement.getElementsByClassName("title-text-year")[0].innerHTML = dataSource[i].date.split("-")[2];
-
-        // put title element in title div
-        dropdownElement.appendChild(newInfoItem("info-date", "🗓️", dataSource[i].date));
-        dropdownElement.appendChild(newInfoItem("info-location", "🌎", dataSource[i].location));
-        dropdownElement.appendChild(newInfoItem("info-club", "🥇", dataSource[i].club));
-        dropdownElement.appendChild(newInfoItem("info-time", "⏱️", dataSource[i].time));
-        dropdownElement.appendChild(newInfoItem("info-margin", "🥈", "+" + (dataSource[i].alt_margin == "" ? dataSource[i].margin : dataSource[i].alt_margin)));
-        for (let j = 0; j < dataSource[i].crew.length - 1; j++) {
-            dropdownElement.appendChild(newInfoItem("info-crew", "👥", dataSource[i].crew[j].name));
-        }
-        // cox or stroke, depending on if it's the men's race (coxed four) or women's race (coxless four)
-        dropdownElement.appendChild(newInfoItem("info-crew", dataSource == varsity_data.men ? "🗣️" : "👥", dataSource[i].crew[dataSource[i].crew.length-1].name));
-        for (let j = 0; j < dataSource[i].notes.length; j++) {
-            dropdownElement.appendChild(newInfoItem("info-note", "📝", dataSource[i].notes[j]));
-        }
-        for (let j = 0; j < dataSource[i].sources.length; j++) {
-            dropdownElement.appendChild(newSourceItem("info-source", "ℹ️", varsity_sources[dataSource[i].sources[j]]));
-        }
-        
-        container.appendChild(clonedElement);
+    switch (state) {
+        case "event": eventSelection.classList.remove("hidden"); break;
+        case "race": raceSelection.classList.remove("hidden"); break;
+        default: raceInformation.classList.remove("hidden"); break;
     }
+
 }
 
-function rerender() {
-    fillContainerWithData(document.getElementById("column-container-men"), varsity_data.men);
-    fillContainerWithData(document.getElementById("column-container-women"), varsity_data.women);
+function selectEvent(event_index) {
+    setSelectionState("race");
 
-    for (let containers = document.getElementsByClassName("info-container"), l = containers.length, i = 0; i < l; i++) {
-        let container = containers[i];
-
-        let dropdownTrigger = container.getElementsByClassName("info-dropdown-title")[0];
-        let dropdownContent = container.getElementsByClassName("dropdown")[0];
-
-        dropdownTrigger.addEventListener("click", () => {
-            if (dropdownContent.classList.contains("invisible"))
-                dropdownContent.classList.remove("invisible");
-            else
-                dropdownContent.classList.add("invisible");
-        });
-    }
+    fillRaceSelectionElements(varsity_data.races[event_index]);
 }
 
-function applyMobileChanges() {
-    let change = 0;
-    if (portraitColumns == landscapeColumns) return;
-    if (document.body.clientWidth > document.body.clientHeight) {
-        // is landscape
-        if (columns == portraitColumns) change = 1;
+function selectRace(race_index) {
+    selectedRace = selectedEvent.data[race_index];
 
-        columns = landscapeColumns;
-    } else {
-        if (columns == landscapeColumns) change = 1;
-
-        // is portrait
-        columns = portraitColumns;
-    }
-    if (change) rerender();
+    // hide selection screen
+    setSelectionState("");
 }
 
 async function getSources() {
@@ -133,35 +50,46 @@ async function getSources() {
     dataSource = varsity_data.men;
 }
 
-async function main() {
-
-    await getSources();
-
-    applyMobileChanges();
-
-    rerender();
-
-    setInterval(applyMobileChanges, 500);
+function elmFromStr(string) {
+    let elm = document.createElement("div");
+    elm.innerHTML = string.trim();
+    return elm.firstChild;
 }
 
-function expandCollapseAll(container) {
-    let elms = container.getElementsByClassName("dropdown");
-    
-    if (!container.classList.contains("collapsed")) {
-        for (let i = 0, l = elms.length; i < l; i++) {
-            elms[i].classList.remove("invisible");
-        }
+function newRaceSelectionElement(year, number) {
+    return elmFromStr(`<div class="item item-bg-${number % 2 == 0 ? "00" : "01"}"><p class="race-number">${number}</p><p class="race-year">${year}</p></div>`);
+}
 
-        container.classList.add("collapsed");
-    } else {
-        for (let i = 0, l = elms.length; i < l; i++) {
-            elms[i].classList.add("invisible");
-        }
+function fillRaceSelectionElements(event) {
 
-        container.classList.remove("collapsed");
+    const wrapper = document.getElementById("race-selector");
+
+    wrapper.innerHTML = "";
+
+    try {
+        const data = event.data;
+            
+        for (let i = 0, l = data.length; i < l; i++) {
+
+            wrapper.appendChild(newRaceSelectionElement(
+                data[i].date.split("-")[2],
+                l - i
+            ));
+
+        }
+    } catch (e) {
+        wrapper.appendChild(elmFromStr(`<p class="error">event not found</p>`));
     }
+}
 
-    container.getElementsByClassName("expand-button")[0].innerHTML = container.classList.contains("collapsed") ? "collapse all" : "expand all";
+function showRaceInformation() {
+
+}
+
+async function main() {
+    await getSources();
+
+    setSelectionState("event");
 }
 
 document.addEventListener("DOMContentLoaded", main);
