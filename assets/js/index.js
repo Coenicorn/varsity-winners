@@ -89,7 +89,11 @@ function showRaceInformation() {
 async function main() {
     await getSources();
 
-    setSelectionState("event");
+    document.getElementById("select-men").getElementsByClassName("event-details")[0].innerHTML += varsity_data.races[0].data.length;
+    document.getElementById("select-women").getElementsByClassName("event-details")[0].innerHTML += varsity_data.races[1].data.length;
+
+
+    setSelectionState("");
 }
 
 document.addEventListener("DOMContentLoaded", main);

@@ -1,3 +1,4 @@
+<!-- Shamelessly and awefully copied from time-team.nl, I love those guys -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,22 +40,27 @@
             <div class="event-link soft-shadow" id="select-men" onclick="selectEvent(0)">
                 <img draggable="false" src="assets/varsity.png" alt="varsity-logo" class="selector-img">
                 <p class="event-name soft-shadow">Oude Heren Vier</p>
-                <p class="event-details">#</p>
+                <p class="event-details"># </p>
             </div>
             <div draggable="false" class="event-link soft-shadow" id="select-women" onclick="selectEvent(1)">
                 <img src="assets/varsity.png" alt="varsity-logo" class="selector-img">
                 <p class="event-name">Oude Damesch Vier</p>
-                <p class="event-details">#</p>
+                <p class="event-details"># </p>
             </div>
         </div>
-        <div id="race-selector-wrapper" class="hidden">
+        <div id="race-selector-wrapper" class="centered-info-wrapper hidden">
             <p id="back-to-selection" onclick="setSelectionState('event')">< back</p>
-            <div id="race-selector">
+            <div id="race-selector" class="centered-info">
             </div>
         </div>
-        <div id="race-information-wrapper">
+        <div id="race-information-wrapper" class="centered-info-wrapper">
             <p id="back-to-selection" onclick="setSelectionState('race')">< back</p>
-            
+            <div id="race-information" class="centered-info">
+                <div class="info-item item-bg-00">
+                    <p class="info-title">location</p>
+                    <p class="info-value">right here ma boy</p>
+                </div>
+            </div>
         </div>
     </main>
 

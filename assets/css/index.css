@@ -52,7 +52,7 @@
     color: rgb(122, 122, 122)
 }
 
-#race-selector-wrapper {
+.centered-info-wrapper {
     width: 100%;
 
     display: flex;
@@ -60,14 +60,14 @@
     align-items: center;
 }
 
-#race-selector {
-    width: 80%;
+.centered-info {
+    width: 60%;
 
     display: flex;
     flex-direction: column;
 }
 
-#race-selector .item p {
+.item p {
     margin: 0;
     padding: 0;
 }
@@ -108,3 +108,27 @@
     cursor: pointer;
 }
 
+#race-information {
+    width: 40%;
+    min-width: 300px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-item p {
+    margin: 0;
+    padding: 0;
+}
+
+.info-title {
+    width: 30%;
+    padding: 8px;
+}
+
+.info-value {
+    width: 70%;
+    padding: 8px;
+}
